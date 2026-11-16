@@ -92,7 +92,7 @@ Colores del sitio: superficies, texto y bordes. El nombre CSS se deriva del grup
 > dentro de `@theme`, no en `:root`, que es lo que permite que `lg:` en
 > Tailwind responda a lo que dice el YAML.
 
-`--font-sans-stack` referencia `--font-sansation`, que inyecta `next/font` en el
+`--font-sans-stack` referencia `--font-arimo` (fuente Arimo), que inyecta `next/font` en el
 layout raíz. Si cambias esa variable en `layout.tsx`, cámbiala también en
 `fonts.sans`.
 

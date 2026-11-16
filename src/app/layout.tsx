@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sansation } from "next/font/google";
+import { Arimo } from "next/font/google";
 import "@/styles/globals.css";
 
 import { ThemeScript } from "@/components/theme-script";
@@ -7,12 +7,12 @@ import { APP_DESCRIPTION, APP_NAME } from "@/lib/app-config";
 import { DEFAULT_THEME } from "@/lib/theme/mode";
 
 // El nombre de la variable lo consume `fonts.sans` en tokens.yml.
-const sansation = Sansation({
+const arimo = Arimo({
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "700"],
+  // Fuente variable: cubre del 400 al 700 con un solo archivo.
   style: ["normal", "italic"],
   display: "swap",
-  variable: "--font-sansation",
+  variable: "--font-arimo",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="es"
-      className={`${sansation.variable} ${DEFAULT_THEME}`}
+      className={`${arimo.variable} ${DEFAULT_THEME}`}
       style={{ colorScheme: DEFAULT_THEME }}
       suppressHydrationWarning
     >

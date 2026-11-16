@@ -109,8 +109,8 @@ base:
   colors.swatch-7-from: "#06b6d4"
   colors.swatch-7-to: "#22c55e"
 
-  # Tipografía — `--font-sansation` lo inyecta next/font en el layout raíz
-  fonts.sans: "var(--font-sansation), system-ui, sans-serif"
+  # Tipografía — `--font-arimo` lo inyecta next/font en el layout raíz
+  fonts.sans: "var(--font-arimo), system-ui, sans-serif"
   fonts.mono: "ui-monospace, SFMono-Regular, Menlo, monospace"
 
   # Radio base — los derivados (sm/md/lg/xl) se calculan en globals.css

@@ -18,7 +18,7 @@ export const SHARED_TOKENS = {
   "--swatch-6-to": "#3b82f6",
   "--swatch-7-from": "#06b6d4",
   "--swatch-7-to": "#22c55e",
-  "--font-sans-stack": "var(--font-sansation), system-ui, sans-serif",
+  "--font-sans-stack": "var(--font-arimo), system-ui, sans-serif",
   "--font-mono-stack": "ui-monospace, SFMono-Regular, Menlo, monospace",
   "--radius": "0.625rem",
   "--spacing-xs": "0.25rem",

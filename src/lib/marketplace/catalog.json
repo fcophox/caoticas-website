@@ -1,38 +1,23 @@
 {
   "categories": [
     {
-      "slug": "ropa",
-      "name": "Ropa",
+      "slug": "cuidado-capilar",
+      "name": "Cuidado capilar",
       "imagePath": null
     },
     {
-      "slug": "accesorios",
-      "name": "Accesorios",
+      "slug": "cuidado-facial",
+      "name": "Cuidado facial",
       "imagePath": null
     },
     {
-      "slug": "hogar",
-      "name": "Hogar",
+      "slug": "cuidado-corporal",
+      "name": "Cuidado corporal",
       "imagePath": null
     },
     {
-      "slug": "papeleria",
-      "name": "Papelería",
-      "imagePath": null
-    },
-    {
-      "slug": "despensa",
-      "name": "Despensa",
-      "imagePath": null
-    },
-    {
-      "slug": "tecnologia",
-      "name": "Tecnología",
-      "imagePath": null
-    },
-    {
-      "slug": "deporte",
-      "name": "Deporte",
+      "slug": "labios",
+      "name": "Labios",
       "imagePath": null
     }
   ],
@@ -56,557 +41,592 @@
   ],
   "products": [
     {
-      "id": "polera-basica-negra",
-      "name": "Polera básica negra",
-      "detail": "Algodón peinado · Tallas S a XL",
-      "description": "Corte recto, costuras reforzadas y tela que no se deforma con los lavados.",
-      "price": 14990,
+      "id": "ampolla-restauracion-y-suavidad",
+      "name": "Ampolla restauración y suavidad",
+      "detail": "Bubbaluu · 15 ml",
+      "description": "Ampolla capilar de la línea Bubbaluu. Aplica el contenido sobre el cabello húmedo, masajea de medios a puntas y enjuaga.",
+      "price": 1990,
       "discountPercent": null,
-      "category": "ropa",
-      "collections": [
-        "nuevos-lanzamientos",
-        "virales"
-      ],
-      "createdAt": "2026-11-16T11:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "poleron-canguro",
-      "name": "Polerón canguro",
-      "detail": "Felpa interior · Unisex",
-      "description": "Polerón con capucha forrada y bolsillo frontal. Ideal para el invierno.",
-      "price": 32990,
-      "discountPercent": 20,
-      "category": "ropa",
-      "collections": [
-        "nuevos-lanzamientos",
-        "marcas-exclusivas"
-      ],
-      "createdAt": "2026-11-16T10:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "jeans-mom-fit",
-      "name": "Jeans mom fit",
-      "detail": "Mezclilla rígida · Tiro alto",
-      "description": "Clásico de tiro alto con lavado claro y bastas sin terminar.",
-      "price": 29990,
-      "discountPercent": 15,
-      "category": "ropa",
+      "category": "cuidado-capilar",
       "collections": [
         "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-16T09:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:59:00.000Z",
+      "images": 1
     },
     {
-      "id": "chaqueta-cortaviento",
-      "name": "Chaqueta cortaviento",
-      "detail": "Impermeable · Plegable",
-      "description": "Liviana, se guarda en su propio bolsillo. Perfecta para viajes.",
-      "price": 39990,
+      "id": "ampolla-hidratacion-intensa",
+      "name": "Ampolla hidratación intensa",
+      "detail": "Bubbaluu · 15 ml",
+      "description": "Ampolla capilar de la línea Bubbaluu. Aplica el contenido sobre el cabello húmedo, masajea de medios a puntas y enjuaga.",
+      "price": 1990,
       "discountPercent": null,
-      "category": "ropa",
-      "collections": [
-        "nuevos-lanzamientos",
-        "virales"
-      ],
-      "createdAt": "2026-11-16T08:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "calcetines-pack-x3",
-      "name": "Calcetines pack x3",
-      "detail": "Algodón · Diseños surtidos",
-      "description": "Tres pares con estampados ilustrados a mano.",
-      "price": 7990,
-      "discountPercent": 10,
-      "category": "ropa",
+      "category": "cuidado-capilar",
       "collections": [
         "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-16T07:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:58:00.000Z",
+      "images": 1
     },
     {
-      "id": "vestido-lino",
-      "name": "Vestido lino",
-      "detail": "Lino natural · Talla única",
-      "description": "Vestido fresco de lino con lazo en la cintura.",
-      "price": 34990,
-      "discountPercent": 30,
-      "category": "ropa",
-      "collections": [
-        "nuevos-lanzamientos",
-        "lo-mas-vendido",
-        "marcas-exclusivas"
-      ],
-      "createdAt": "2026-11-16T06:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "bufanda-tejida",
-      "name": "Bufanda tejida",
-      "detail": "Lana de alpaca · 180 cm",
-      "description": "Tejida a mano por artesanas del sur de Chile.",
-      "price": 18990,
+      "id": "ampolla-para-cabellos-secos",
+      "name": "Ampolla para cabellos secos",
+      "detail": "Bubbaluu · 15 ml",
+      "description": "Ampolla capilar de la línea Bubbaluu. Aplica el contenido sobre el cabello húmedo, masajea de medios a puntas y enjuaga.",
+      "price": 1990,
       "discountPercent": null,
-      "category": "accesorios",
-      "collections": [
-        "nuevos-lanzamientos",
-        "virales"
-      ],
-      "createdAt": "2026-11-16T05:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "gorro-pescador",
-      "name": "Gorro pescador",
-      "detail": "Algodón · Reversible",
-      "description": "Dos colores en uno. Protege del sol sin perder estilo.",
-      "price": 11990,
-      "discountPercent": 25,
-      "category": "accesorios",
-      "collections": [
-        "nuevos-lanzamientos",
-        "lo-mas-vendido"
-      ],
-      "createdAt": "2026-11-16T04:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "mochila-urbana",
-      "name": "Mochila urbana",
-      "detail": "20 L · Compartimento notebook",
-      "description": "Tela repelente al agua y espalda acolchada.",
-      "price": 44990,
-      "discountPercent": 10,
-      "category": "accesorios",
+      "category": "cuidado-capilar",
       "collections": [
         "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-16T03:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:57:00.000Z",
+      "images": 1
     },
     {
-      "id": "billetera-de-cuero",
-      "name": "Billetera de cuero",
-      "detail": "Cuero curtido vegetal",
-      "description": "Billetera compacta con seis ranuras para tarjetas.",
-      "price": 19990,
+      "id": "ampolla-proteccion-termica",
+      "name": "Ampolla protección térmica",
+      "detail": "Bubbaluu · 15 ml",
+      "description": "Ampolla capilar de la línea Bubbaluu. Aplica el contenido sobre el cabello húmedo, masajea de medios a puntas y enjuaga.",
+      "price": 1990,
       "discountPercent": null,
-      "category": "accesorios",
+      "category": "cuidado-capilar",
       "collections": [
-        "nuevos-lanzamientos",
-        "virales",
-        "marcas-exclusivas"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-16T02:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:56:00.000Z",
+      "images": 1
     },
     {
-      "id": "lentes-de-sol-retro",
-      "name": "Lentes de sol retro",
-      "detail": "Protección UV400",
-      "description": "Marco de acetato y lentes polarizados.",
-      "price": 24990,
-      "discountPercent": 35,
-      "category": "accesorios",
-      "collections": [
-        "lo-mas-vendido"
-      ],
-      "createdAt": "2026-11-16T01:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "aros-de-plata",
-      "name": "Aros de plata",
-      "detail": "Plata 950 · Hipoalergénicos",
-      "description": "Aros pequeños de diseño minimalista.",
-      "price": 15990,
+      "id": "thermo-protector-uva",
+      "name": "Thermo protector uva",
+      "detail": "Bubbaluu · 250 ml",
+      "description": "Spray protector térmico para usar antes del secador o la plancha. Aplica sobre el cabello húmedo o seco a unos 20 cm.",
+      "price": 4590,
       "discountPercent": null,
-      "category": "accesorios",
-      "collections": [],
-      "createdAt": "2026-11-16T00:00:00.000Z",
-      "images": 4
+      "category": "cuidado-capilar",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:55:00.000Z",
+      "images": 1
     },
     {
-      "id": "plato-hondo-de-gres",
-      "name": "Plato hondo de gres",
-      "detail": "20 cm · Esmalte mate",
-      "description": "Cada pieza tiene variaciones únicas del horno.",
-      "price": 9990,
+      "id": "thermo-protector-tutti-frutti",
+      "name": "Thermo protector tutti frutti",
+      "detail": "Bubbaluu · 250 ml",
+      "description": "Spray protector térmico para usar antes del secador o la plancha. Aplica sobre el cabello húmedo o seco a unos 20 cm.",
+      "price": 4590,
       "discountPercent": null,
-      "category": "hogar",
+      "category": "cuidado-capilar",
       "collections": [
-        "virales"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-15T23:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:54:00.000Z",
+      "images": 1
     },
     {
-      "id": "set-de-4-vasos",
-      "name": "Set de 4 vasos",
-      "detail": "Vidrio reciclado · 300 ml",
-      "description": "Vasos soplados a mano con burbujas naturales.",
-      "price": 16990,
-      "discountPercent": 15,
-      "category": "hogar",
-      "collections": [
-        "marcas-exclusivas"
-      ],
-      "createdAt": "2026-11-15T22:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "cojin-bordado",
-      "name": "Cojín bordado",
-      "detail": "45 x 45 cm · Con relleno",
-      "description": "Funda de algodón con bordado floral.",
-      "price": 17990,
+      "id": "thermo-protector-frutilla",
+      "name": "Thermo protector frutilla",
+      "detail": "Bubbaluu · 250 ml",
+      "description": "Spray protector térmico para usar antes del secador o la plancha. Aplica sobre el cabello húmedo o seco a unos 20 cm.",
+      "price": 4590,
       "discountPercent": null,
-      "category": "hogar",
-      "collections": [],
-      "createdAt": "2026-11-15T21:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "manta-de-lana",
-      "name": "Manta de lana",
-      "detail": "130 x 170 cm",
-      "description": "Manta de telar en lana de oveja teñida con tintes naturales.",
-      "price": 59990,
-      "discountPercent": 20,
-      "category": "hogar",
+      "category": "cuidado-capilar",
       "collections": [
-        "virales"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-15T20:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:53:00.000Z",
+      "images": 1
     },
     {
-      "id": "vela-aromatica",
-      "name": "Vela aromática",
-      "detail": "Cera de soya · 40 h",
-      "description": "Aroma a lavanda y eucalipto en frasco reutilizable.",
-      "price": 8990,
+      "id": "crema-de-manos-tutti-frutti",
+      "name": "Crema de manos tutti frutti",
+      "detail": "Bubbaluu",
+      "description": "Crema de manos en formato de bolsillo con aroma frutal. Ideal para llevar en la cartera.",
+      "price": 1090,
       "discountPercent": null,
-      "category": "hogar",
-      "collections": [],
-      "createdAt": "2026-11-15T19:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "macetero-colgante",
-      "name": "Macetero colgante",
-      "detail": "Cerámica + cuerda de algodón",
-      "description": "Incluye cuerda de macramé para colgar.",
-      "price": 12990,
-      "discountPercent": 10,
-      "category": "hogar",
+      "category": "cuidado-corporal",
       "collections": [
-        "marcas-exclusivas"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-15T18:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:52:00.000Z",
+      "images": 1
     },
     {
-      "id": "tabla-de-picar",
-      "name": "Tabla de picar",
-      "detail": "Madera de raulí · 35 cm",
-      "description": "Tabla terminada con aceite mineral apto para alimentos.",
-      "price": 21990,
+      "id": "crema-de-manos-frutilla",
+      "name": "Crema de manos frutilla",
+      "detail": "Bubbaluu",
+      "description": "Crema de manos en formato de bolsillo con aroma frutal. Ideal para llevar en la cartera.",
+      "price": 1090,
       "discountPercent": null,
-      "category": "hogar",
+      "category": "cuidado-corporal",
       "collections": [
-        "virales"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-15T17:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:51:00.000Z",
+      "images": 1
     },
     {
-      "id": "lampara-de-mesa",
-      "name": "Lámpara de mesa",
-      "detail": "Pantalla de lino · E27",
-      "description": "Base de cerámica con pantalla de lino natural.",
-      "price": 49990,
-      "discountPercent": 25,
-      "category": "hogar",
-      "collections": [
-        "lo-mas-vendido"
-      ],
-      "createdAt": "2026-11-15T16:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "libreta-a5-punteada",
-      "name": "Libreta A5 punteada",
-      "detail": "120 hojas · 100 g",
-      "description": "Tapa dura forrada en tela y cierre elástico.",
-      "price": 9990,
+      "id": "crema-de-manos-uva",
+      "name": "Crema de manos uva",
+      "detail": "Bubbaluu",
+      "description": "Crema de manos en formato de bolsillo con aroma frutal. Ideal para llevar en la cartera.",
+      "price": 1090,
       "discountPercent": null,
-      "category": "papeleria",
-      "collections": [],
-      "createdAt": "2026-11-15T15:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "set-de-lapices",
-      "name": "Set de lápices",
-      "detail": "12 colores · Acuarelables",
-      "description": "Lápices de alta pigmentación en estuche metálico.",
-      "price": 13990,
-      "discountPercent": 15,
-      "category": "papeleria",
+      "category": "cuidado-corporal",
       "collections": [
-        "virales",
-        "marcas-exclusivas"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-15T14:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:50:00.000Z",
+      "images": 1
     },
     {
-      "id": "agenda-2027",
-      "name": "Agenda 2027",
-      "detail": "Semanal · Tapa blanda",
-      "description": "Planificador semanal con páginas de notas y metas.",
-      "price": 15990,
-      "discountPercent": 30,
-      "category": "papeleria",
-      "collections": [
-        "lo-mas-vendido"
-      ],
-      "createdAt": "2026-11-15T13:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "laminas-ilustradas",
-      "name": "Láminas ilustradas",
-      "detail": "Set x3 · A4",
-      "description": "Impresiones giclée de ilustraciones de flora nativa.",
-      "price": 19990,
+      "id": "toallitas-desmaquillantes-uva",
+      "name": "Toallitas desmaquillantes uva",
+      "detail": "Bubbaluu · 30 unidades",
+      "description": "Toallitas desmaquillantes con aroma frutal. Retiran el maquillaje y las impurezas del rostro.",
+      "price": 1390,
       "discountPercent": null,
-      "category": "papeleria",
-      "collections": [],
-      "createdAt": "2026-11-15T12:00:00.000Z",
-      "images": 4
+      "category": "cuidado-facial",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:49:00.000Z",
+      "images": 1
     },
     {
-      "id": "cafe-de-grano",
-      "name": "Café de grano",
-      "detail": "Etiopía · 250 g",
-      "description": "Tueste medio con notas a frutos rojos y chocolate.",
-      "price": 11990,
+      "id": "toallitas-desmaquillantes-tutti-frutti",
+      "name": "Toallitas desmaquillantes tutti frutti",
+      "detail": "Bubbaluu · 30 unidades",
+      "description": "Toallitas desmaquillantes con aroma frutal. Retiran el maquillaje y las impurezas del rostro.",
+      "price": 1390,
       "discountPercent": null,
-      "category": "despensa",
+      "category": "cuidado-facial",
       "collections": [
-        "virales"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-15T11:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:48:00.000Z",
+      "images": 1
     },
     {
-      "id": "miel-de-ulmo",
-      "name": "Miel de ulmo",
-      "detail": "Cruda · 500 g",
-      "description": "Miel monofloral cosechada en la Región de Los Lagos.",
-      "price": 9990,
-      "discountPercent": 10,
-      "category": "despensa",
-      "collections": [
-        "marcas-exclusivas"
-      ],
-      "createdAt": "2026-11-15T10:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "mermelada-de-murta",
-      "name": "Mermelada de murta",
-      "detail": "Artesanal · 300 g",
-      "description": "Preparada en pequeños lotes sin preservantes.",
-      "price": 6990,
+      "id": "toallitas-desmaquillantes-frutilla",
+      "name": "Toallitas desmaquillantes frutilla",
+      "detail": "Bubbaluu · 30 unidades",
+      "description": "Toallitas desmaquillantes con aroma frutal. Retiran el maquillaje y las impurezas del rostro.",
+      "price": 1390,
       "discountPercent": null,
-      "category": "despensa",
-      "collections": [],
-      "createdAt": "2026-11-15T09:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "te-en-hebras",
-      "name": "Té en hebras",
-      "detail": "Mezcla de hierbas · 100 g",
-      "description": "Cedrón, menta y cáscara de naranja.",
-      "price": 7990,
-      "discountPercent": 20,
-      "category": "despensa",
+      "category": "cuidado-facial",
       "collections": [
-        "virales"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-15T08:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:47:00.000Z",
+      "images": 1
     },
     {
-      "id": "audifonos-inalambricos",
-      "name": "Audífonos inalámbricos",
-      "detail": "Bluetooth 5.3 · 30 h",
-      "description": "Cancelación de ruido activa y estuche de carga.",
-      "price": 59990,
-      "discountPercent": 30,
-      "category": "tecnologia",
-      "collections": [
-        "lo-mas-vendido"
-      ],
-      "createdAt": "2026-11-15T07:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "parlante-portatil",
-      "name": "Parlante portátil",
-      "detail": "Resistente al agua IPX7",
-      "description": "Sonido 360° y batería para 12 horas.",
-      "price": 39990,
-      "discountPercent": 15,
-      "category": "tecnologia",
-      "collections": [
-        "marcas-exclusivas"
-      ],
-      "createdAt": "2026-11-15T06:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "cargador-rapido",
-      "name": "Cargador rápido",
-      "detail": "USB-C · 65 W",
-      "description": "Carga notebook, tablet y celular con un solo cargador.",
-      "price": 24990,
+      "id": "parches-para-ojos-caviar",
+      "name": "Parches para ojos caviar",
+      "detail": "Bubbaluu",
+      "description": "Parches de hidrogel para el contorno de ojos. Aplica sobre la piel limpia y retira después de 15 a 20 minutos.",
+      "price": 290,
       "discountPercent": null,
-      "category": "tecnologia",
+      "category": "cuidado-facial",
       "collections": [
-        "virales"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-15T05:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:46:00.000Z",
+      "images": 1
     },
     {
-      "id": "soporte-de-notebook",
-      "name": "Soporte de notebook",
-      "detail": "Aluminio · Ajustable",
-      "description": "Seis alturas y diseño plegable.",
-      "price": 19990,
-      "discountPercent": 10,
-      "category": "tecnologia",
-      "collections": [],
-      "createdAt": "2026-11-15T04:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "teclado-mecanico",
-      "name": "Teclado mecánico",
-      "detail": "Switches marrones · 75%",
-      "description": "Retroiluminado y con cable USB-C desmontable.",
-      "price": 69990,
-      "discountPercent": 20,
-      "category": "tecnologia",
-      "collections": [],
-      "createdAt": "2026-11-15T03:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "mouse-ergonomico",
-      "name": "Mouse ergonómico",
-      "detail": "Vertical · Inalámbrico",
-      "description": "Reduce la tensión de la muñeca en jornadas largas.",
-      "price": 22990,
+      "id": "parches-para-ojos-granada",
+      "name": "Parches para ojos granada",
+      "detail": "Bubbaluu",
+      "description": "Parches de hidrogel para el contorno de ojos. Aplica sobre la piel limpia y retira después de 15 a 20 minutos.",
+      "price": 290,
       "discountPercent": null,
-      "category": "tecnologia",
+      "category": "cuidado-facial",
       "collections": [
-        "virales",
-        "marcas-exclusivas"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-15T02:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:45:00.000Z",
+      "images": 1
     },
     {
-      "id": "botella-termica",
-      "name": "Botella térmica",
-      "detail": "Acero inoxidable · 750 ml",
-      "description": "Mantiene el frío 24 h y el calor 12 h.",
-      "price": 17990,
-      "discountPercent": 25,
-      "category": "deporte",
-      "collections": [
-        "lo-mas-vendido"
-      ],
-      "createdAt": "2026-11-15T01:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "mat-de-yoga",
-      "name": "Mat de yoga",
-      "detail": "TPE · 6 mm",
-      "description": "Antideslizante por ambos lados, incluye correa.",
-      "price": 27990,
+      "id": "mascarilla-facial-cereza",
+      "name": "Mascarilla facial cereza",
+      "detail": "Bubbaluu",
+      "description": "Mascarilla facial de tela de un solo uso. Aplica sobre el rostro limpio, deja actuar 15 a 20 minutos y retira.",
+      "price": 490,
       "discountPercent": null,
-      "category": "deporte",
-      "collections": [],
-      "createdAt": "2026-11-15T00:00:00.000Z",
-      "images": 4
-    },
-    {
-      "id": "bandas-elasticas",
-      "name": "Bandas elásticas",
-      "detail": "Set x5 · Resistencias",
-      "description": "Cinco niveles de resistencia y bolsa de transporte.",
-      "price": 12990,
-      "discountPercent": 15,
-      "category": "deporte",
+      "category": "cuidado-facial",
       "collections": [
-        "virales"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-14T23:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:44:00.000Z",
+      "images": 1
     },
     {
-      "id": "cuerda-para-saltar",
-      "name": "Cuerda para saltar",
-      "detail": "Rodamientos · Ajustable",
-      "description": "Mangos de aluminio y cable de acero recubierto.",
-      "price": 9990,
+      "id": "mascarilla-facial-mango",
+      "name": "Mascarilla facial mango",
+      "detail": "Bubbaluu",
+      "description": "Mascarilla facial de tela de un solo uso. Aplica sobre el rostro limpio, deja actuar 15 a 20 minutos y retira.",
+      "price": 490,
       "discountPercent": null,
-      "category": "deporte",
+      "category": "cuidado-facial",
       "collections": [
-        "marcas-exclusivas"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-14T22:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:43:00.000Z",
+      "images": 1
     },
     {
-      "id": "zapatillas-running",
-      "name": "Zapatillas running",
-      "detail": "Amortiguación media",
-      "description": "Livianas y transpirables para entrenamientos diarios.",
-      "price": 64990,
-      "discountPercent": 35,
-      "category": "deporte",
+      "id": "mascarilla-facial-kiwi",
+      "name": "Mascarilla facial kiwi",
+      "detail": "Bubbaluu",
+      "description": "Mascarilla facial de tela de un solo uso. Aplica sobre el rostro limpio, deja actuar 15 a 20 minutos y retira.",
+      "price": 490,
+      "discountPercent": null,
+      "category": "cuidado-facial",
       "collections": [
-        "lo-mas-vendido"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-14T21:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:42:00.000Z",
+      "images": 1
     },
     {
-      "id": "mochila-de-hidratacion",
-      "name": "Mochila de hidratación",
-      "detail": "Bolsa de 2 L",
-      "description": "Para trail y ciclismo, con bolsillos frontales.",
-      "price": 34990,
-      "discountPercent": 10,
-      "category": "deporte",
+      "id": "mascarilla-facial-pina",
+      "name": "Mascarilla facial piña",
+      "detail": "Bubbaluu",
+      "description": "Mascarilla facial de tela de un solo uso. Aplica sobre el rostro limpio, deja actuar 15 a 20 minutos y retira.",
+      "price": 490,
+      "discountPercent": null,
+      "category": "cuidado-facial",
       "collections": [
-        "virales"
+        "nuevos-lanzamientos"
       ],
-      "createdAt": "2026-11-14T20:00:00.000Z",
-      "images": 4
+      "createdAt": "2026-11-16T12:41:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "mascarilla-facial-uva",
+      "name": "Mascarilla facial uva",
+      "detail": "Bubbaluu",
+      "description": "Mascarilla facial de tela de un solo uso. Aplica sobre el rostro limpio, deja actuar 15 a 20 minutos y retira.",
+      "price": 490,
+      "discountPercent": null,
+      "category": "cuidado-facial",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:40:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "mascarilla-facial-tutti-frutti",
+      "name": "Mascarilla facial tutti frutti",
+      "detail": "Bubbaluu",
+      "description": "Mascarilla facial de tela de un solo uso. Aplica sobre el rostro limpio, deja actuar 15 a 20 minutos y retira.",
+      "price": 490,
+      "discountPercent": null,
+      "category": "cuidado-facial",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:39:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "mascarilla-facial-frutilla",
+      "name": "Mascarilla facial frutilla",
+      "detail": "Bubbaluu",
+      "description": "Mascarilla facial de tela de un solo uso. Aplica sobre el rostro limpio, deja actuar 15 a 20 minutos y retira.",
+      "price": 490,
+      "discountPercent": null,
+      "category": "cuidado-facial",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:38:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "aceite-de-masaje-arnica",
+      "name": "Aceite de masaje árnica",
+      "detail": "Bubbaluu · 200 ml",
+      "description": "Aceite de masaje con extracto de árnica. Aplica sobre la piel y masajea con movimientos circulares.",
+      "price": 4990,
+      "discountPercent": null,
+      "category": "cuidado-corporal",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:37:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "crema-corporal-frutilla",
+      "name": "Crema corporal frutilla",
+      "detail": "Bubbaluu",
+      "description": "Crema corporal hidratante con aroma frutal. Aplica sobre la piel limpia con un masaje suave.",
+      "price": 5490,
+      "discountPercent": null,
+      "category": "cuidado-corporal",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:36:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "crema-corporal-uva",
+      "name": "Crema corporal uva",
+      "detail": "Bubbaluu",
+      "description": "Crema corporal hidratante con aroma frutal. Aplica sobre la piel limpia con un masaje suave.",
+      "price": 5490,
+      "discountPercent": null,
+      "category": "cuidado-corporal",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:35:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "crema-corporal-tutti-frutti",
+      "name": "Crema corporal tutti frutti",
+      "detail": "Bubbaluu",
+      "description": "Crema corporal hidratante con aroma frutal. Aplica sobre la piel limpia con un masaje suave.",
+      "price": 5490,
+      "discountPercent": null,
+      "category": "cuidado-corporal",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:34:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "balsamo-aceite-de-labios-uva",
+      "name": "Bálsamo + aceite de labios uva",
+      "detail": "Bubbaluu · Set de 2",
+      "description": "Set de bálsamo y aceite labial con aroma frutal para mantener los labios suaves e hidratados.",
+      "price": 2190,
+      "discountPercent": null,
+      "category": "labios",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:33:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "balsamo-aceite-de-labios-sandia",
+      "name": "Bálsamo + aceite de labios sandía",
+      "detail": "Bubbaluu · Set de 2",
+      "description": "Set de bálsamo y aceite labial con aroma frutal para mantener los labios suaves e hidratados.",
+      "price": 2190,
+      "discountPercent": null,
+      "category": "labios",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:32:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "balsamo-aceite-de-labios-frutilla",
+      "name": "Bálsamo + aceite de labios frutilla",
+      "detail": "Bubbaluu · Set de 2",
+      "description": "Set de bálsamo y aceite labial con aroma frutal para mantener los labios suaves e hidratados.",
+      "price": 2190,
+      "discountPercent": null,
+      "category": "labios",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:31:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "parches-para-acne-morado",
+      "name": "Parches para acné morado",
+      "detail": "Bubbaluu",
+      "description": "Parches para granitos. Aplica sobre la piel limpia y seca, y déjalos actuar varias horas o durante la noche.",
+      "price": 1790,
+      "discountPercent": null,
+      "category": "cuidado-facial",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:30:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "parches-para-acne-pustular-rosado",
+      "name": "Parches para acné pustular rosado",
+      "detail": "Bubbaluu",
+      "description": "Parches para granitos. Aplica sobre la piel limpia y seca, y déjalos actuar varias horas o durante la noche.",
+      "price": 1790,
+      "discountPercent": null,
+      "category": "cuidado-facial",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:29:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "protector-solar-con-colageno",
+      "name": "Protector solar con colágeno",
+      "detail": "Bubbaluu",
+      "description": "Protector solar facial con colágeno. Aplica antes de exponerte al sol y reaplica durante el día.",
+      "price": 3490,
+      "discountPercent": null,
+      "category": "cuidado-facial",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:28:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "jabon-facial-de-arroz",
+      "name": "Jabón facial de arroz",
+      "detail": "Bubbaluu",
+      "description": "Jabón facial con extracto de arroz para la limpieza diaria del rostro.",
+      "price": 2390,
+      "discountPercent": null,
+      "category": "cuidado-facial",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:27:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "desenredante-tutti-frutti",
+      "name": "Desenredante tutti frutti",
+      "detail": "Bubbaluu · 250 ml",
+      "description": "Spray desenredante sin enjuague. Facilita el peinado y deja el cabello suave y con aroma frutal.",
+      "price": 4590,
+      "discountPercent": null,
+      "category": "cuidado-capilar",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:26:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "desenredante-uva",
+      "name": "Desenredante uva",
+      "detail": "Bubbaluu · 250 ml",
+      "description": "Spray desenredante sin enjuague. Facilita el peinado y deja el cabello suave y con aroma frutal.",
+      "price": 4590,
+      "discountPercent": null,
+      "category": "cuidado-capilar",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:25:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "desenredante-frutilla",
+      "name": "Desenredante frutilla",
+      "detail": "Bubbaluu · 250 ml",
+      "description": "Spray desenredante sin enjuague. Facilita el peinado y deja el cabello suave y con aroma frutal.",
+      "price": 4590,
+      "discountPercent": null,
+      "category": "cuidado-capilar",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:24:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "bomba-nutritiva-frutilla",
+      "name": "Bomba nutritiva frutilla",
+      "detail": "Bubbaluu · Mascarilla capilar",
+      "description": "Mascarilla capilar nutritiva. Aplica después del champú de medios a puntas, deja actuar unos minutos y enjuaga.",
+      "price": 4890,
+      "discountPercent": null,
+      "category": "cuidado-capilar",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:23:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "bomba-nutritiva-tutti-frutti",
+      "name": "Bomba nutritiva tutti frutti",
+      "detail": "Bubbaluu · Mascarilla capilar",
+      "description": "Mascarilla capilar nutritiva. Aplica después del champú de medios a puntas, deja actuar unos minutos y enjuaga.",
+      "price": 4890,
+      "discountPercent": null,
+      "category": "cuidado-capilar",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:22:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "bomba-nutritiva-uva",
+      "name": "Bomba nutritiva uva",
+      "detail": "Bubbaluu · Mascarilla capilar",
+      "description": "Mascarilla capilar nutritiva. Aplica después del champú de medios a puntas, deja actuar unos minutos y enjuaga.",
+      "price": 4890,
+      "discountPercent": null,
+      "category": "cuidado-capilar",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:21:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "cera-de-peinar-mate-men",
+      "name": "Cera de peinar mate Men",
+      "detail": "Bubbaluu · 80 g",
+      "description": "Cera de peinar con acabado mate para hombre. Toma una pequeña cantidad, frota entre las manos y moldea a gusto.",
+      "price": 3290,
+      "discountPercent": null,
+      "category": "cuidado-capilar",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:20:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "parches-para-ojos-acido-hialuronico",
+      "name": "Parches para ojos ácido hialurónico",
+      "detail": "Bubbaluu",
+      "description": "Parches de hidrogel para el contorno de ojos. Aplica sobre la piel limpia y retira después de 15 a 20 minutos.",
+      "price": 290,
+      "discountPercent": null,
+      "category": "cuidado-facial",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:19:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "removedor-de-impurezas-tutti-frutti",
+      "name": "Removedor de impurezas tutti frutti",
+      "detail": "Bubbaluu · Exfoliante",
+      "description": "Gel exfoliante que ayuda a remover células muertas e impurezas. Úsalo una o dos veces por semana.",
+      "price": 3790,
+      "discountPercent": null,
+      "category": "cuidado-facial",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T12:18:00.000Z",
+      "images": 1
     }
   ]
 }

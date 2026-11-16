@@ -11,8 +11,8 @@ import { ProductGallery } from "./product-gallery";
 import { PurchasePanel } from "./purchase-panel";
 
 /** Todas las páginas se generan en el build. */
-export function generateStaticParams() {
-  return allProductIds().map((productId) => ({ productId }));
+export async function generateStaticParams() {
+  return (await allProductIds()).map((productId) => ({ productId }));
 }
 
 type Props = { params: Promise<{ productId: string }> };

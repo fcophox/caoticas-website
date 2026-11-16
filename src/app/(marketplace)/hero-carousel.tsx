@@ -12,16 +12,16 @@ const SLIDES = [
   {
     image: "/hero/slide-1.svg",
     eyebrow: "Catálogo",
-    title: "Descubre productos únicos para ti y tu casa",
+    title: "Descubre productos de cuidado personal",
     text: "Explora el catálogo, compara precios y encuentra las mejores ofertas.",
     cta: "Ver catálogo",
   },
   {
     image: "/hero/slide-2.svg",
-    eyebrow: "Ofertas",
-    title: "Hasta 35% de descuento en productos seleccionados",
-    text: "Ropa, hogar, tecnología y más con precios rebajados por tiempo limitado.",
-    cta: "Ver ofertas",
+    eyebrow: "Bubbaluu",
+    title: "Cuidado para tu cabello, rostro y cuerpo",
+    text: "Ampollas, mascarillas, cremas y más, con aromas frutales.",
+    cta: "Ver productos",
   },
   {
     image: "/hero/slide-3.svg",

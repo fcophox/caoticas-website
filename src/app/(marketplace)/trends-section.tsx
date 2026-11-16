@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Dumbbell, Flame, Gem, Laptop, Sofa, type LucideIcon } from "lucide-react";
+import { Droplets, Heart, Smile, Sparkles, Wind, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SWATCH, type SwatchTone } from "@/components/marketplace/swatches";
 
@@ -19,34 +19,34 @@ type Trend = {
 
 const TRENDS: Trend[] = [
   {
-    label: "Lo más vendido en Tecnología",
-    href: "/categoria/tecnologia",
-    icon: Laptop,
-    tone: 6,
-  },
-  {
-    label: "Hogar con estilo",
-    href: "/categoria/hogar",
-    icon: Sofa,
-    tone: 3,
-  },
-  {
-    label: "Accesorios del momento",
-    href: "/categoria/accesorios",
-    icon: Gem,
-    tone: 2,
-  },
-  {
-    label: "Ofertas virales",
-    href: "/#recomendados",
-    icon: Flame,
+    label: "Rutina facial con mascarillas y parches",
+    href: "/categoria/cuidado-facial",
+    icon: Smile,
     tone: 4,
   },
   {
-    label: "Vida activa",
-    href: "/categoria/deporte",
-    icon: Dumbbell,
-    tone: 7,
+    label: "Cabello protegido del calor",
+    href: "/categoria/cuidado-capilar",
+    icon: Wind,
+    tone: 1,
+  },
+  {
+    label: "Hidratación para el cuerpo",
+    href: "/categoria/cuidado-corporal",
+    icon: Droplets,
+    tone: 3,
+  },
+  {
+    label: "Labios suaves",
+    href: "/categoria/labios",
+    icon: Heart,
+    tone: 5,
+  },
+  {
+    label: "Nuevos lanzamientos",
+    href: "/#recomendados",
+    icon: Sparkles,
+    tone: 2,
   },
 ];
 

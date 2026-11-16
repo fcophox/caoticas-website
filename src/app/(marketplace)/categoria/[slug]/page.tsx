@@ -11,8 +11,8 @@ import { MarketplaceCatalog } from "../../marketplace-catalog";
 import { CategoryCircles, withCounts } from "../../category-circles";
 
 /** Todas las páginas se generan en el build. */
-export function generateStaticParams() {
-  return allCategorySlugs().map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  return (await allCategorySlugs()).map((slug) => ({ slug }));
 }
 
 type Props = { params: Promise<{ slug: string }> };
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props) {
   if (!category) return { title: "Categoría no encontrada" };
   return {
     title: category.name,
-    description: `Productos de ${category.name} en el marketplace.`,
+    description: `Productos de ${category.name}.`,
   };
 }
 

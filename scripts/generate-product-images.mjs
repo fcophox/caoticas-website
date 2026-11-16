@@ -18,6 +18,10 @@ const categoryName = Object.fromEntries(catalog.categories.map((c) => [c.slug, c
 
 // Colores de los marcadores, por nombre de categoría.
 const PALETTES = {
+  "Cuidado capilar": ["#a855f7", "#ec4899"],
+  "Cuidado facial": ["#f472b6", "#fb923c"],
+  "Cuidado corporal": ["#f43f5e", "#f59e0b"],
+  Labios: ["#e11d48", "#c026d3"],
   Ropa: ["#6366f1", "#a855f7"],
   Accesorios: ["#f59e0b", "#ef4444"],
   Hogar: ["#10b981", "#0ea5e9"],

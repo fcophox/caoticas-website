@@ -1,13 +1,10 @@
 import Link from "next/link";
 import {
-  Dumbbell,
-  Gem,
-  Laptop,
-  NotebookPen,
-  Shirt,
-  Sofa,
+  Droplets,
+  Heart,
+  Smile,
   Tag,
-  UtensilsCrossed,
+  Wind,
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -19,13 +16,10 @@ import type { MarketplaceCategory } from "@/lib/marketplace/data";
  * Una categoría nueva sin entrada aquí usa el ícono y degradado por defecto.
  */
 const FALLBACK: Record<string, { icon: LucideIcon; gradient: string }> = {
-  ropa: { icon: Shirt, gradient: SWATCH[1] },
-  accesorios: { icon: Gem, gradient: SWATCH[2] },
-  hogar: { icon: Sofa, gradient: SWATCH[3] },
-  papeleria: { icon: NotebookPen, gradient: SWATCH[4] },
-  despensa: { icon: UtensilsCrossed, gradient: SWATCH[5] },
-  tecnologia: { icon: Laptop, gradient: SWATCH[6] },
-  deporte: { icon: Dumbbell, gradient: SWATCH[7] },
+  "cuidado-capilar": { icon: Wind, gradient: SWATCH[1] },
+  "cuidado-facial": { icon: Smile, gradient: SWATCH[4] },
+  "cuidado-corporal": { icon: Droplets, gradient: SWATCH[3] },
+  labios: { icon: Heart, gradient: SWATCH[5] },
 };
 const DEFAULT_LOOK = { icon: Tag, gradient: SWATCH[6] };
 

@@ -28,8 +28,22 @@ npm run dev        # http://localhost:3000
 - **Hero:** textos e imágenes en `src/app/(marketplace)/hero-carousel.tsx` y `public/hero/`.
 - **Tendencias:** lista `TRENDS` en `src/app/(marketplace)/trends-section.tsx`.
 
-Para conectar una API o un CMS, reimplementa las funciones de
-`src/lib/marketplace/data.ts` con las mismas firmas; las páginas no cambian.
+### Supabase (CMS)
+
+Si existe `.env.local` con `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY` (ver
+[`.env.example`](.env.example)), el sitio lee productos, categorías y
+colecciones desde el Supabase del CMS, en vivo: lo que cambies en el CMS se ve
+al recargar. Sólo se publican los productos activos del espacio
+`SUPABASE_TENANT_SLUG` (por defecto `demo`). Código en
+`src/lib/marketplace/supabase-source.ts`.
+
+Sin esas variables (como en Vercel hoy) se usa `catalog.json`. Mientras el
+Supabase sea local, **cada cambio de productos hay que reflejarlo también en
+`catalog.json`** para que llegue al sitio publicado. Al pasar a un Supabase en
+la nube basta con poner las mismas variables en Vercel.
+
+Las imágenes son marcadores (`public/products/<slug-del-nombre>-0.svg`); las
+fotos del CMS todavía no se leen.
 
 ## Carrito y checkout
 

@@ -1,4 +1,4 @@
-import { BadgePercent, Package, Truck } from "lucide-react";
+import { BadgePercent, LayoutGrid, Package, Truck } from "lucide-react";
 import {
   listPublicCategories,
   listPublicCollections,
@@ -24,10 +24,14 @@ export default async function MarketplaceHome() {
     listPublicCollections(),
   ]);
   const offerCount = products.filter(hasOffer).length;
+  const categoryCount = withCounts(categories, products).length;
 
   const highlights = [
     { icon: Package, label: `${products.length} productos` },
-    { icon: BadgePercent, label: `${offerCount} ${offerCount === 1 ? "oferta" : "ofertas"} activas` },
+    // Sin ofertas vigentes se muestra cuántas categorías hay en vez de "0 ofertas".
+    offerCount > 0
+      ? { icon: BadgePercent, label: `${offerCount} ${offerCount === 1 ? "oferta" : "ofertas"} activas` }
+      : { icon: LayoutGrid, label: `${categoryCount} categorías` },
     { icon: Truck, label: "Despacho a todo Chile" },
   ];
 

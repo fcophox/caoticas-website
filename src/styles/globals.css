@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@import "./tokens.generated.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design system de la landing.
+ *
+ * Los VALORES no viven aquí: viven en `tokens.yml` (raíz del repo) y los
+ * escribe `npm run tokens` en `tokens.generated.css`. Este archivo sólo
+ * CABLEA esas variables a Tailwind y define los estilos base. Ver DESIGN.md.
+ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-warn: var(--warn);
+  --color-warn-surface: var(--warn-surface);
+  --color-success: var(--success);
+  --color-success-surface: var(--success-surface);
+  --color-danger: var(--danger);
+  --color-danger-surface: var(--danger-surface);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Sitio público */
+  --color-on-media: var(--on-media);
+  --color-overlay: var(--overlay);
+  --color-swatch-1-from: var(--swatch-1-from);
+  --color-swatch-1-to: var(--swatch-1-to);
+  --color-swatch-2-from: var(--swatch-2-from);
+  --color-swatch-2-to: var(--swatch-2-to);
+  --color-swatch-3-from: var(--swatch-3-from);
+  --color-swatch-3-to: var(--swatch-3-to);
+  --color-swatch-4-from: var(--swatch-4-from);
+  --color-swatch-4-to: var(--swatch-4-to);
+  --color-swatch-5-from: var(--swatch-5-from);
+  --color-swatch-5-to: var(--swatch-5-to);
+  --color-swatch-6-from: var(--swatch-6-from);
+  --color-swatch-6-to: var(--swatch-6-to);
+  --color-swatch-7-from: var(--swatch-7-from);
+  --color-swatch-7-to: var(--swatch-7-to);
+
+  --font-sans: var(--font-sans-stack);
+  --font-mono: var(--font-mono-stack);
+
+  /* Derivados del radio base de tokens.yml. */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+}

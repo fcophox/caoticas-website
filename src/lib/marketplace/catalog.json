@@ -1,0 +1,662 @@
+{
+  "stores": [
+    {
+      "slug": "tienda-demo",
+      "name": "Tienda Demo"
+    },
+    {
+      "slug": "otra-tienda",
+      "name": "Otra Tienda"
+    }
+  ],
+  "categories": [
+    {
+      "slug": "ropa",
+      "name": "Ropa",
+      "imagePath": null
+    },
+    {
+      "slug": "accesorios",
+      "name": "Accesorios",
+      "imagePath": null
+    },
+    {
+      "slug": "hogar",
+      "name": "Hogar",
+      "imagePath": null
+    },
+    {
+      "slug": "papeleria",
+      "name": "Papelería",
+      "imagePath": null
+    },
+    {
+      "slug": "despensa",
+      "name": "Despensa",
+      "imagePath": null
+    },
+    {
+      "slug": "tecnologia",
+      "name": "Tecnología",
+      "imagePath": null
+    },
+    {
+      "slug": "deporte",
+      "name": "Deporte",
+      "imagePath": null
+    }
+  ],
+  "collections": [
+    {
+      "slug": "nuevos-lanzamientos",
+      "name": "Nuevos lanzamientos"
+    },
+    {
+      "slug": "virales",
+      "name": "Virales"
+    },
+    {
+      "slug": "marcas-exclusivas",
+      "name": "Marcas exclusivas"
+    },
+    {
+      "slug": "lo-mas-vendido",
+      "name": "Lo más vendido"
+    }
+  ],
+  "products": [
+    {
+      "id": "polera-basica-negra",
+      "name": "Polera básica negra",
+      "detail": "Algodón peinado · Tallas S a XL",
+      "description": "Corte recto, costuras reforzadas y tela que no se deforma con los lavados.",
+      "price": 14990,
+      "discountPercent": null,
+      "category": "ropa",
+      "store": "tienda-demo",
+      "collections": [
+        "nuevos-lanzamientos",
+        "virales"
+      ],
+      "createdAt": "2026-11-16T11:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "poleron-canguro",
+      "name": "Polerón canguro",
+      "detail": "Felpa interior · Unisex",
+      "description": "Polerón con capucha forrada y bolsillo frontal. Ideal para el invierno.",
+      "price": 32990,
+      "discountPercent": 20,
+      "category": "ropa",
+      "store": "tienda-demo",
+      "collections": [
+        "nuevos-lanzamientos",
+        "marcas-exclusivas"
+      ],
+      "createdAt": "2026-11-16T10:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "jeans-mom-fit",
+      "name": "Jeans mom fit",
+      "detail": "Mezclilla rígida · Tiro alto",
+      "description": "Clásico de tiro alto con lavado claro y bastas sin terminar.",
+      "price": 29990,
+      "discountPercent": 15,
+      "category": "ropa",
+      "store": "tienda-demo",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T09:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "chaqueta-cortaviento",
+      "name": "Chaqueta cortaviento",
+      "detail": "Impermeable · Plegable",
+      "description": "Liviana, se guarda en su propio bolsillo. Perfecta para viajes.",
+      "price": 39990,
+      "discountPercent": null,
+      "category": "ropa",
+      "store": "tienda-demo",
+      "collections": [
+        "nuevos-lanzamientos",
+        "virales"
+      ],
+      "createdAt": "2026-11-16T08:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "calcetines-pack-x3",
+      "name": "Calcetines pack x3",
+      "detail": "Algodón · Diseños surtidos",
+      "description": "Tres pares con estampados ilustrados a mano.",
+      "price": 7990,
+      "discountPercent": 10,
+      "category": "ropa",
+      "store": "tienda-demo",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T07:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "vestido-lino",
+      "name": "Vestido lino",
+      "detail": "Lino natural · Talla única",
+      "description": "Vestido fresco de lino con lazo en la cintura.",
+      "price": 34990,
+      "discountPercent": 30,
+      "category": "ropa",
+      "store": "tienda-demo",
+      "collections": [
+        "nuevos-lanzamientos",
+        "lo-mas-vendido",
+        "marcas-exclusivas"
+      ],
+      "createdAt": "2026-11-16T06:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "bufanda-tejida",
+      "name": "Bufanda tejida",
+      "detail": "Lana de alpaca · 180 cm",
+      "description": "Tejida a mano por artesanas del sur de Chile.",
+      "price": 18990,
+      "discountPercent": null,
+      "category": "accesorios",
+      "store": "tienda-demo",
+      "collections": [
+        "nuevos-lanzamientos",
+        "virales"
+      ],
+      "createdAt": "2026-11-16T05:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "gorro-pescador",
+      "name": "Gorro pescador",
+      "detail": "Algodón · Reversible",
+      "description": "Dos colores en uno. Protege del sol sin perder estilo.",
+      "price": 11990,
+      "discountPercent": 25,
+      "category": "accesorios",
+      "store": "tienda-demo",
+      "collections": [
+        "nuevos-lanzamientos",
+        "lo-mas-vendido"
+      ],
+      "createdAt": "2026-11-16T04:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "mochila-urbana",
+      "name": "Mochila urbana",
+      "detail": "20 L · Compartimento notebook",
+      "description": "Tela repelente al agua y espalda acolchada.",
+      "price": 44990,
+      "discountPercent": 10,
+      "category": "accesorios",
+      "store": "tienda-demo",
+      "collections": [
+        "nuevos-lanzamientos"
+      ],
+      "createdAt": "2026-11-16T03:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "billetera-de-cuero",
+      "name": "Billetera de cuero",
+      "detail": "Cuero curtido vegetal",
+      "description": "Billetera compacta con seis ranuras para tarjetas.",
+      "price": 19990,
+      "discountPercent": null,
+      "category": "accesorios",
+      "store": "tienda-demo",
+      "collections": [
+        "nuevos-lanzamientos",
+        "virales",
+        "marcas-exclusivas"
+      ],
+      "createdAt": "2026-11-16T02:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "lentes-de-sol-retro",
+      "name": "Lentes de sol retro",
+      "detail": "Protección UV400",
+      "description": "Marco de acetato y lentes polarizados.",
+      "price": 24990,
+      "discountPercent": 35,
+      "category": "accesorios",
+      "store": "tienda-demo",
+      "collections": [
+        "lo-mas-vendido"
+      ],
+      "createdAt": "2026-11-16T01:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "aros-de-plata",
+      "name": "Aros de plata",
+      "detail": "Plata 950 · Hipoalergénicos",
+      "description": "Aros pequeños de diseño minimalista.",
+      "price": 15990,
+      "discountPercent": null,
+      "category": "accesorios",
+      "store": "tienda-demo",
+      "collections": [],
+      "createdAt": "2026-11-16T00:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "plato-hondo-de-gres",
+      "name": "Plato hondo de gres",
+      "detail": "20 cm · Esmalte mate",
+      "description": "Cada pieza tiene variaciones únicas del horno.",
+      "price": 9990,
+      "discountPercent": null,
+      "category": "hogar",
+      "store": "tienda-demo",
+      "collections": [
+        "virales"
+      ],
+      "createdAt": "2026-11-15T23:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "set-de-4-vasos",
+      "name": "Set de 4 vasos",
+      "detail": "Vidrio reciclado · 300 ml",
+      "description": "Vasos soplados a mano con burbujas naturales.",
+      "price": 16990,
+      "discountPercent": 15,
+      "category": "hogar",
+      "store": "tienda-demo",
+      "collections": [
+        "marcas-exclusivas"
+      ],
+      "createdAt": "2026-11-15T22:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "cojin-bordado",
+      "name": "Cojín bordado",
+      "detail": "45 x 45 cm · Con relleno",
+      "description": "Funda de algodón con bordado floral.",
+      "price": 17990,
+      "discountPercent": null,
+      "category": "hogar",
+      "store": "tienda-demo",
+      "collections": [],
+      "createdAt": "2026-11-15T21:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "manta-de-lana",
+      "name": "Manta de lana",
+      "detail": "130 x 170 cm",
+      "description": "Manta de telar en lana de oveja teñida con tintes naturales.",
+      "price": 59990,
+      "discountPercent": 20,
+      "category": "hogar",
+      "store": "tienda-demo",
+      "collections": [
+        "virales"
+      ],
+      "createdAt": "2026-11-15T20:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "vela-aromatica",
+      "name": "Vela aromática",
+      "detail": "Cera de soya · 40 h",
+      "description": "Aroma a lavanda y eucalipto en frasco reutilizable.",
+      "price": 8990,
+      "discountPercent": null,
+      "category": "hogar",
+      "store": "tienda-demo",
+      "collections": [],
+      "createdAt": "2026-11-15T19:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "macetero-colgante",
+      "name": "Macetero colgante",
+      "detail": "Cerámica + cuerda de algodón",
+      "description": "Incluye cuerda de macramé para colgar.",
+      "price": 12990,
+      "discountPercent": 10,
+      "category": "hogar",
+      "store": "tienda-demo",
+      "collections": [
+        "marcas-exclusivas"
+      ],
+      "createdAt": "2026-11-15T18:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "tabla-de-picar",
+      "name": "Tabla de picar",
+      "detail": "Madera de raulí · 35 cm",
+      "description": "Tabla terminada con aceite mineral apto para alimentos.",
+      "price": 21990,
+      "discountPercent": null,
+      "category": "hogar",
+      "store": "tienda-demo",
+      "collections": [
+        "virales"
+      ],
+      "createdAt": "2026-11-15T17:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "lampara-de-mesa",
+      "name": "Lámpara de mesa",
+      "detail": "Pantalla de lino · E27",
+      "description": "Base de cerámica con pantalla de lino natural.",
+      "price": 49990,
+      "discountPercent": 25,
+      "category": "hogar",
+      "store": "tienda-demo",
+      "collections": [
+        "lo-mas-vendido"
+      ],
+      "createdAt": "2026-11-15T16:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "libreta-a5-punteada",
+      "name": "Libreta A5 punteada",
+      "detail": "120 hojas · 100 g",
+      "description": "Tapa dura forrada en tela y cierre elástico.",
+      "price": 9990,
+      "discountPercent": null,
+      "category": "papeleria",
+      "store": "tienda-demo",
+      "collections": [],
+      "createdAt": "2026-11-15T15:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "set-de-lapices",
+      "name": "Set de lápices",
+      "detail": "12 colores · Acuarelables",
+      "description": "Lápices de alta pigmentación en estuche metálico.",
+      "price": 13990,
+      "discountPercent": 15,
+      "category": "papeleria",
+      "store": "tienda-demo",
+      "collections": [
+        "virales",
+        "marcas-exclusivas"
+      ],
+      "createdAt": "2026-11-15T14:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "agenda-2027",
+      "name": "Agenda 2027",
+      "detail": "Semanal · Tapa blanda",
+      "description": "Planificador semanal con páginas de notas y metas.",
+      "price": 15990,
+      "discountPercent": 30,
+      "category": "papeleria",
+      "store": "tienda-demo",
+      "collections": [
+        "lo-mas-vendido"
+      ],
+      "createdAt": "2026-11-15T13:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "laminas-ilustradas",
+      "name": "Láminas ilustradas",
+      "detail": "Set x3 · A4",
+      "description": "Impresiones giclée de ilustraciones de flora nativa.",
+      "price": 19990,
+      "discountPercent": null,
+      "category": "papeleria",
+      "store": "tienda-demo",
+      "collections": [],
+      "createdAt": "2026-11-15T12:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "cafe-de-grano",
+      "name": "Café de grano",
+      "detail": "Etiopía · 250 g",
+      "description": "Tueste medio con notas a frutos rojos y chocolate.",
+      "price": 11990,
+      "discountPercent": null,
+      "category": "despensa",
+      "store": "tienda-demo",
+      "collections": [
+        "virales"
+      ],
+      "createdAt": "2026-11-15T11:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "miel-de-ulmo",
+      "name": "Miel de ulmo",
+      "detail": "Cruda · 500 g",
+      "description": "Miel monofloral cosechada en la Región de Los Lagos.",
+      "price": 9990,
+      "discountPercent": 10,
+      "category": "despensa",
+      "store": "tienda-demo",
+      "collections": [
+        "marcas-exclusivas"
+      ],
+      "createdAt": "2026-11-15T10:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "mermelada-de-murta",
+      "name": "Mermelada de murta",
+      "detail": "Artesanal · 300 g",
+      "description": "Preparada en pequeños lotes sin preservantes.",
+      "price": 6990,
+      "discountPercent": null,
+      "category": "despensa",
+      "store": "tienda-demo",
+      "collections": [],
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "te-en-hebras",
+      "name": "Té en hebras",
+      "detail": "Mezcla de hierbas · 100 g",
+      "description": "Cedrón, menta y cáscara de naranja.",
+      "price": 7990,
+      "discountPercent": 20,
+      "category": "despensa",
+      "store": "tienda-demo",
+      "collections": [
+        "virales"
+      ],
+      "createdAt": "2026-11-15T08:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "audifonos-inalambricos",
+      "name": "Audífonos inalámbricos",
+      "detail": "Bluetooth 5.3 · 30 h",
+      "description": "Cancelación de ruido activa y estuche de carga.",
+      "price": 59990,
+      "discountPercent": 30,
+      "category": "tecnologia",
+      "store": "otra-tienda",
+      "collections": [
+        "lo-mas-vendido"
+      ],
+      "createdAt": "2026-11-15T07:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "parlante-portatil",
+      "name": "Parlante portátil",
+      "detail": "Resistente al agua IPX7",
+      "description": "Sonido 360° y batería para 12 horas.",
+      "price": 39990,
+      "discountPercent": 15,
+      "category": "tecnologia",
+      "store": "otra-tienda",
+      "collections": [
+        "marcas-exclusivas"
+      ],
+      "createdAt": "2026-11-15T06:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "cargador-rapido",
+      "name": "Cargador rápido",
+      "detail": "USB-C · 65 W",
+      "description": "Carga notebook, tablet y celular con un solo cargador.",
+      "price": 24990,
+      "discountPercent": null,
+      "category": "tecnologia",
+      "store": "otra-tienda",
+      "collections": [
+        "virales"
+      ],
+      "createdAt": "2026-11-15T05:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "soporte-de-notebook",
+      "name": "Soporte de notebook",
+      "detail": "Aluminio · Ajustable",
+      "description": "Seis alturas y diseño plegable.",
+      "price": 19990,
+      "discountPercent": 10,
+      "category": "tecnologia",
+      "store": "otra-tienda",
+      "collections": [],
+      "createdAt": "2026-11-15T04:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "teclado-mecanico",
+      "name": "Teclado mecánico",
+      "detail": "Switches marrones · 75%",
+      "description": "Retroiluminado y con cable USB-C desmontable.",
+      "price": 69990,
+      "discountPercent": 20,
+      "category": "tecnologia",
+      "store": "otra-tienda",
+      "collections": [],
+      "createdAt": "2026-11-15T03:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "mouse-ergonomico",
+      "name": "Mouse ergonómico",
+      "detail": "Vertical · Inalámbrico",
+      "description": "Reduce la tensión de la muñeca en jornadas largas.",
+      "price": 22990,
+      "discountPercent": null,
+      "category": "tecnologia",
+      "store": "otra-tienda",
+      "collections": [
+        "virales",
+        "marcas-exclusivas"
+      ],
+      "createdAt": "2026-11-15T02:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "botella-termica",
+      "name": "Botella térmica",
+      "detail": "Acero inoxidable · 750 ml",
+      "description": "Mantiene el frío 24 h y el calor 12 h.",
+      "price": 17990,
+      "discountPercent": 25,
+      "category": "deporte",
+      "store": "otra-tienda",
+      "collections": [
+        "lo-mas-vendido"
+      ],
+      "createdAt": "2026-11-15T01:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "mat-de-yoga",
+      "name": "Mat de yoga",
+      "detail": "TPE · 6 mm",
+      "description": "Antideslizante por ambos lados, incluye correa.",
+      "price": 27990,
+      "discountPercent": null,
+      "category": "deporte",
+      "store": "otra-tienda",
+      "collections": [],
+      "createdAt": "2026-11-15T00:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "bandas-elasticas",
+      "name": "Bandas elásticas",
+      "detail": "Set x5 · Resistencias",
+      "description": "Cinco niveles de resistencia y bolsa de transporte.",
+      "price": 12990,
+      "discountPercent": 15,
+      "category": "deporte",
+      "store": "otra-tienda",
+      "collections": [
+        "virales"
+      ],
+      "createdAt": "2026-11-14T23:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "cuerda-para-saltar",
+      "name": "Cuerda para saltar",
+      "detail": "Rodamientos · Ajustable",
+      "description": "Mangos de aluminio y cable de acero recubierto.",
+      "price": 9990,
+      "discountPercent": null,
+      "category": "deporte",
+      "store": "otra-tienda",
+      "collections": [
+        "marcas-exclusivas"
+      ],
+      "createdAt": "2026-11-14T22:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "zapatillas-running",
+      "name": "Zapatillas running",
+      "detail": "Amortiguación media",
+      "description": "Livianas y transpirables para entrenamientos diarios.",
+      "price": 64990,
+      "discountPercent": 35,
+      "category": "deporte",
+      "store": "otra-tienda",
+      "collections": [
+        "lo-mas-vendido"
+      ],
+      "createdAt": "2026-11-14T21:00:00.000Z",
+      "images": 4
+    },
+    {
+      "id": "mochila-de-hidratacion",
+      "name": "Mochila de hidratación",
+      "detail": "Bolsa de 2 L",
+      "description": "Para trail y ciclismo, con bolsillos frontales.",
+      "price": 34990,
+      "discountPercent": 10,
+      "category": "deporte",
+      "store": "otra-tienda",
+      "collections": [
+        "virales"
+      ],
+      "createdAt": "2026-11-14T20:00:00.000Z",
+      "images": 4
+    }
+  ]
+}

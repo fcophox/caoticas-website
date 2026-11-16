@@ -69,7 +69,7 @@ export function CategoryCircles({
       </h2>
 
       {/* En celular se desliza horizontalmente; en escritorio queda centrado. */}
-      <ul className="-mx-4 mt-8 flex snap-x gap-4 overflow-x-auto px-4 pb-2 md:mx-0 md:flex-wrap md:justify-center md:gap-8 md:overflow-visible md:px-0">
+      <ul className="-mx-4 mt-6 flex snap-x gap-3 overflow-x-auto px-4 pb-2 md:mx-0 md:mt-8 md:flex-wrap md:justify-center md:gap-8 md:overflow-visible md:px-0">
         {categories.map((c) => {
           const isSelected = activeSlug === c.slug;
           const look = FALLBACK[c.slug] ?? DEFAULT_LOOK;
@@ -79,11 +79,11 @@ export function CategoryCircles({
               <Link
                 href={`/categoria/${c.slug}`}
                 aria-current={isSelected ? "page" : undefined}
-                className="group flex w-24 flex-col items-center gap-3 text-center focus-visible:outline-none md:w-32"
+                className="group flex w-18 flex-col items-center gap-2 text-center focus-visible:outline-none md:w-32 md:gap-3"
               >
                 <span
                   className={cn(
-                    "relative block size-24 overflow-hidden rounded-full ring-offset-4 ring-offset-background transition-[box-shadow,transform] duration-200 group-hover:-translate-y-0.5 group-focus-visible:ring-2 group-focus-visible:ring-ring md:size-32",
+                    "relative block size-16 overflow-hidden rounded-full ring-offset-2 ring-offset-background md:ring-offset-4 transition-[box-shadow,transform] duration-200 group-hover:-translate-y-0.5 group-focus-visible:ring-2 group-focus-visible:ring-ring md:size-32",
                     isSelected && "ring-2 ring-primary",
                   )}
                 >
@@ -101,13 +101,13 @@ export function CategoryCircles({
                         look.gradient,
                       )}
                     >
-                      <Icon className="size-10 md:size-12" strokeWidth={1.5} />
+                      <Icon className="size-7 md:size-12" strokeWidth={1.5} />
                     </span>
                   )}
                 </span>
-                <span className="text-sm font-medium leading-tight">
+                <span className="text-xs font-medium leading-tight md:text-sm">
                   {c.name}
-                  <span className="mt-0.5 block text-xs font-normal text-muted-foreground">
+                  <span className="mt-0.5 block text-[0.7rem] font-normal text-muted-foreground md:text-xs">
                     {c.count} {c.count === 1 ? "producto" : "productos"}
                   </span>
                 </span>

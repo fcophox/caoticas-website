@@ -82,9 +82,24 @@ function loadJsonCatalog(): CatalogData {
   };
 }
 
+/**
+ * Si Supabase no responde (p. ej. OrbStack apagado) el sitio no se cae: usa
+ * `catalog.json` y deja el aviso en la consola del servidor.
+ */
+async function loadSupabaseOrJson(): Promise<CatalogData> {
+  try {
+    return await loadSupabaseCatalog();
+  } catch (error) {
+    console.warn(
+      `[catálogo] Supabase no disponible (${error instanceof Error ? error.message : error}); usando catalog.json.`,
+    );
+    return loadJsonCatalog();
+  }
+}
+
 /** Una carga por request (React `cache`): todas las funciones comparten el resultado. */
 const loadCatalog = cache(async (): Promise<CatalogData> => {
-  const data = isSupabaseConfigured() ? await loadSupabaseCatalog() : loadJsonCatalog();
+  const data = isSupabaseConfigured() ? await loadSupabaseOrJson() : loadJsonCatalog();
   return {
     ...data,
     products: [...data.products].sort((a, b) => b.createdAt.localeCompare(a.createdAt)),

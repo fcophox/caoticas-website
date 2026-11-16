@@ -5,15 +5,18 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { CartButton } from "@/components/cart/cart-button";
 import { CartDrawer } from "@/components/cart/cart-drawer";
 import { HeaderSearch } from "@/components/marketplace/header-search";
-import { listPublicProducts } from "@/lib/marketplace/data";
+import { listPublicCategories, listPublicProducts } from "@/lib/marketplace/data";
+import { SiteFooter } from "@/components/marketplace/site-footer";
 import { HowItWorks } from "@/components/marketplace/how-it-works";
 import { APP_NAME, THEME_TOGGLE_ENABLED } from "@/lib/app-config";
 
 /** Marco del sitio: encabezado, contenido, "Cómo comprar" y pie. */
 export default async function MarketplaceLayout({ children }: { children: React.ReactNode }) {
-  const year = new Date().getFullYear();
   // El buscador filtra en el navegador: con el catálogo actual es instantáneo.
-  const products = await listPublicProducts();
+  const [products, allCategories] = await Promise.all([listPublicProducts(), listPublicCategories()]);
+  // En el pie sólo las categorías que tienen productos.
+  const usedSlugs = new Set(products.map((p) => p.category?.slug));
+  const categories = allCategories.filter((c) => usedSlugs.has(c.slug));
 
   return (
     <div className="flex min-h-dvh flex-col bg-background text-foreground">
@@ -51,14 +54,7 @@ export default async function MarketplaceLayout({ children }: { children: React.
 
       <HowItWorks />
 
-      <footer className="border-t">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between md:px-6">
-          <p>
-            © {year} {APP_NAME}. Todos los derechos reservados.
-          </p>
-          <p>Despachos a todo Chile · 30 días para cambios y devoluciones.</p>
-        </div>
-      </footer>
+      <SiteFooter categories={categories} />
     </div>
   );
 }

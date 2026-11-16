@@ -267,7 +267,15 @@ export function CheckoutForm() {
             )}
           </Button>
           <p className="text-center text-xs text-muted-foreground">
-            Al confirmar aceptas los términos y la política de cambios y devoluciones.
+            Al confirmar aceptas los{" "}
+            <Link href="/terminos" className="underline underline-offset-2 hover:text-foreground">
+              términos y condiciones
+            </Link>{" "}
+            y la{" "}
+            <Link href="/cambios-y-devoluciones" className="underline underline-offset-2 hover:text-foreground">
+              política de cambios y devoluciones
+            </Link>
+            .
           </p>
         </OrderSummary>
 

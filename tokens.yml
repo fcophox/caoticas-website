@@ -28,44 +28,44 @@
 
 base:
   # Superficies
-  colors.background.dark: "#191919"
+  colors.background.dark: "#1c1323"
   colors.background.light: "#ffffff"
-  colors.foreground.dark: "#fafafa"
-  colors.foreground.light: "#0a0a0a"
-  colors.card.dark: "#171717"
+  colors.foreground.dark: "#fbf5ff"
+  colors.foreground.light: "#1c1323"
+  colors.card.dark: "#241a2c"
   colors.card.light: "#ffffff"
-  colors.card-foreground.dark: "#fafafa"
-  colors.card-foreground.light: "#0a0a0a"
-  colors.popover.dark: "#171717"
+  colors.card-foreground.dark: "#fbf5ff"
+  colors.card-foreground.light: "#1c1323"
+  colors.popover.dark: "#241a2c"
   colors.popover.light: "#ffffff"
-  colors.popover-foreground.dark: "#fafafa"
-  colors.popover-foreground.light: "#0a0a0a"
+  colors.popover-foreground.dark: "#fbf5ff"
+  colors.popover-foreground.light: "#1c1323"
 
   # Acentos
-  colors.primary.dark: "#fafafa"
-  colors.primary.light: "#111827"
-  colors.primary-foreground.dark: "#18181b"
+  colors.primary.dark: "#d4b0f5"
+  colors.primary.light: "#8a3d93"
+  colors.primary-foreground.dark: "#1c1323"
   colors.primary-foreground.light: "#ffffff"
-  colors.secondary.dark: "#27272a"
-  colors.secondary.light: "#f4f4f5"
-  colors.secondary-foreground.dark: "#fafafa"
-  colors.secondary-foreground.light: "#18181b"
-  colors.accent.dark: "#27272a"
-  colors.accent.light: "#f4f4f5"
-  colors.accent-foreground.dark: "#fafafa"
-  colors.accent-foreground.light: "#18181b"
+  colors.secondary.dark: "#33263d"
+  colors.secondary.light: "#f2e6fb"
+  colors.secondary-foreground.dark: "#fbf5ff"
+  colors.secondary-foreground.light: "#4a2257"
+  colors.accent.dark: "#33263d"
+  colors.accent.light: "#f2e6fb"
+  colors.accent-foreground.dark: "#fbf5ff"
+  colors.accent-foreground.light: "#4a2257"
 
   # Neutrales
-  colors.muted.dark: "#27272a"
-  colors.muted.light: "#f4f4f5"
-  colors.muted-foreground.dark: "#a1a1aa"
-  colors.muted-foreground.light: "#71717a"
-  colors.border.dark: "#27272a"
-  colors.border.light: "#e4e4e7"
-  colors.input.dark: "#27272a"
-  colors.input.light: "#e4e4e7"
-  colors.ring.dark: "#d4d4d8"
-  colors.ring.light: "#111827"
+  colors.muted.dark: "#33263d"
+  colors.muted.light: "#f7f0fb"
+  colors.muted-foreground.dark: "#b9a6c8"
+  colors.muted-foreground.light: "#6e5c7c"
+  colors.border.dark: "#3a2c45"
+  colors.border.light: "#eadcf2"
+  colors.input.dark: "#3a2c45"
+  colors.input.light: "#eadcf2"
+  colors.ring.dark: "#d4b0f5"
+  colors.ring.light: "#8a3d93"
 
 
   # Estados semánticos — badges, callouts, toasts
@@ -90,24 +90,25 @@ base:
   # Texto y elementos que van SOBRE imágenes o degradados, y el velo/negro
   # que les da contraste (hero, pestañas de tendencias, botón del hero).
   colors.on-media: "#ffffff"
-  colors.overlay: "#000000"
+  colors.overlay: "#1c1323"
 
-  # Paleta de degradados del marketplace (círculos de categorías, tendencias).
+  # Paleta de degradados (círculos de categorías, tendencias), tomada del
+  # logo: lavanda, rosa orquídea, durazno, morado y el negro de las letras.
   # Cada tono tiene un inicio (-from) y un final (-to).
-  colors.swatch-1-from: "#6366f1"
-  colors.swatch-1-to: "#a855f7"
-  colors.swatch-2-from: "#fbbf24"
-  colors.swatch-2-to: "#f43f5e"
-  colors.swatch-3-from: "#10b981"
-  colors.swatch-3-to: "#0ea5e9"
-  colors.swatch-4-from: "#ec4899"
-  colors.swatch-4-to: "#fb923c"
-  colors.swatch-5-from: "#84cc16"
-  colors.swatch-5-to: "#ca8a04"
-  colors.swatch-6-from: "#1e293b"
-  colors.swatch-6-to: "#3b82f6"
-  colors.swatch-7-from: "#06b6d4"
-  colors.swatch-7-to: "#22c55e"
+  colors.swatch-1-from: "#b48ae6"
+  colors.swatch-1-to: "#d96ec4"
+  colors.swatch-2-from: "#f0a46e"
+  colors.swatch-2-to: "#d9609f"
+  colors.swatch-3-from: "#a77be0"
+  colors.swatch-3-to: "#6a35a8"
+  colors.swatch-4-from: "#e07cbf"
+  colors.swatch-4-to: "#f0a07a"
+  colors.swatch-5-from: "#1c1323"
+  colors.swatch-5-to: "#8a3d93"
+  colors.swatch-6-from: "#c58fe8"
+  colors.swatch-6-to: "#8f5fd6"
+  colors.swatch-7-from: "#c45bb8"
+  colors.swatch-7-to: "#9b6fe0"
 
   # Tipografía — `--font-arimo` lo inyecta next/font en el layout raíz
   fonts.sans: "var(--font-arimo), system-ui, sans-serif"
@@ -152,7 +153,8 @@ base:
 #  y como BRAND_TOKENS en TypeScript. El generador exige que
 #  el bloque exista.
 
+# Colores exactos del logo (contorno magenta y lavanda de la luna).
 brand:
-  primary: "#111827"
-  secondary: "#6366f1"
+  primary: "#c45bb8"
+  secondary: "#c9a2f2"
   radius: "0.625rem"

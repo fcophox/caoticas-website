@@ -121,6 +121,23 @@ Tailwind sólo genera las clases que encuentra escritas enteras en el código.
 
 ---
 
+## Paleta de marca (logo)
+
+Los colores salen del logo: lavanda y rosa orquídea de la luna, durazno de
+los reflejos, el magenta del contorno y el negro violáceo de las letras.
+
+| Rol | Token | Valor (claro) |
+|---|---|---|
+| Acción: botones, foco, etiqueta de descuento | `primary`, `ring` | `#8a3d93` (magenta oscurecido: 6,6:1 con blanco) |
+| Texto y "negro" de marca | `foreground`, `overlay` | `#1c1323` |
+| Superficies suaves | `secondary`, `accent`, `muted` | `#f2e6fb`, `#f7f0fb` |
+| Degradados | `swatch-1…7` | lavanda→rosa, durazno→rosa, lila→morado, rosa→durazno, negro→orquídea… |
+| Exactos del logo | `brand-primary`, `brand-secondary` | `#c45bb8`, `#c9a2f2` |
+
+Los SVG del hero (`public/hero/`) y los marcadores de producto
+(`scripts/generate-product-images.mjs`) usan la misma paleta escrita a mano:
+si cambias los tokens, actualízalos también.
+
 ## Ver y cambiar los tokens
 
 Con el sitio corriendo (`npm run dev`), abre otra terminal:

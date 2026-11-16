@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" preserveAspectRatio="xMidYMid slice">
 <defs><filter id="b" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="110"/></filter>
 <pattern id="d" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#fff" fill-opacity="0.12"/></pattern></defs>
-<rect width="1600" height="800" fill="#be123c"/>
-<g filter="url(#b)"><circle cx="247" cy="145" r="420" fill="#ea580c" opacity="0.75"/><circle cx="1193" cy="664" r="480" fill="#9333ea" opacity="0.75"/><circle cx="956" cy="194" r="360" fill="#0ea5e9" opacity="0.75"/><circle cx="1553" cy="114" r="300" fill="#ea580c" opacity="0.75"/><circle cx="208" cy="712" r="340" fill="#9333ea" opacity="0.75"/></g>
+<rect width="1600" height="800" fill="#c45bb8"/>
+<g filter="url(#b)"><circle cx="247" cy="145" r="420" fill="#f0a07a" opacity="0.75"/><circle cx="1193" cy="664" r="480" fill="#1c1323" opacity="0.75"/><circle cx="956" cy="194" r="360" fill="#a77be0" opacity="0.75"/><circle cx="1553" cy="114" r="300" fill="#f0a07a" opacity="0.75"/><circle cx="208" cy="712" r="340" fill="#1c1323" opacity="0.75"/></g>
 <rect width="1600" height="800" fill="url(#d)"/>
 <circle cx="40" cy="686" r="79" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="2"/><circle cx="396" cy="107" r="104" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="2"/><circle cx="363" cy="530" r="92" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="2"/><circle cx="1121" cy="437" r="125" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="2"/><circle cx="1060" cy="385" r="59" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="2"/><circle cx="824" cy="793" r="155" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="2"/><circle cx="1416" cy="526" r="52" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="2"/>
 </svg>

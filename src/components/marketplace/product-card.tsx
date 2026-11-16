@@ -99,8 +99,7 @@ export function PublicProductCard({ product: p }: { product: MarketplaceProduct 
         </div>
 
         <div className="flex flex-1 flex-col p-3">
-          <p className="truncate text-xs text-muted-foreground">{p.store.name}</p>
-          <h3 className="mt-0.5 line-clamp-2 font-medium leading-snug" title={p.name}>
+          <h3 className="line-clamp-2 font-medium leading-snug" title={p.name}>
             {p.name}
           </h3>
           {p.detail && <p className="mt-1 truncate text-xs text-muted-foreground">{p.detail}</p>}

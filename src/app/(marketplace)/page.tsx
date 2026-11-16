@@ -1,4 +1,4 @@
-import { BadgePercent, ShieldCheck, Store } from "lucide-react";
+import { BadgePercent, Package, Truck } from "lucide-react";
 import {
   listPublicCategories,
   listPublicCollections,
@@ -13,7 +13,7 @@ import { TrendsSection } from "./trends-section";
 import { CategoryCircles, withCounts } from "./category-circles";
 
 export const metadata = {
-  title: { absolute: `${APP_NAME} · Marketplace` },
+  title: { absolute: APP_NAME },
   description: APP_DESCRIPTION,
 };
 
@@ -23,13 +23,12 @@ export default async function MarketplaceHome() {
     listPublicCategories(),
     listPublicCollections(),
   ]);
-  const storeCount = new Set(products.map((p) => p.store.slug)).size;
   const offerCount = products.filter(hasOffer).length;
 
   const highlights = [
-    { icon: Store, label: `${storeCount} ${storeCount === 1 ? "tienda" : "tiendas"}` },
+    { icon: Package, label: `${products.length} productos` },
     { icon: BadgePercent, label: `${offerCount} ${offerCount === 1 ? "oferta" : "ofertas"} activas` },
-    { icon: ShieldCheck, label: "Vendedores verificados" },
+    { icon: Truck, label: "Despacho a todo Chile" },
   ];
 
   return (

@@ -1,14 +1,4 @@
 {
-  "stores": [
-    {
-      "slug": "tienda-demo",
-      "name": "Tienda Demo"
-    },
-    {
-      "slug": "otra-tienda",
-      "name": "Otra Tienda"
-    }
-  ],
   "categories": [
     {
       "slug": "ropa",
@@ -73,7 +63,6 @@
       "price": 14990,
       "discountPercent": null,
       "category": "ropa",
-      "store": "tienda-demo",
       "collections": [
         "nuevos-lanzamientos",
         "virales"
@@ -89,7 +78,6 @@
       "price": 32990,
       "discountPercent": 20,
       "category": "ropa",
-      "store": "tienda-demo",
       "collections": [
         "nuevos-lanzamientos",
         "marcas-exclusivas"
@@ -105,7 +93,6 @@
       "price": 29990,
       "discountPercent": 15,
       "category": "ropa",
-      "store": "tienda-demo",
       "collections": [
         "nuevos-lanzamientos"
       ],
@@ -120,7 +107,6 @@
       "price": 39990,
       "discountPercent": null,
       "category": "ropa",
-      "store": "tienda-demo",
       "collections": [
         "nuevos-lanzamientos",
         "virales"
@@ -136,7 +122,6 @@
       "price": 7990,
       "discountPercent": 10,
       "category": "ropa",
-      "store": "tienda-demo",
       "collections": [
         "nuevos-lanzamientos"
       ],
@@ -151,7 +136,6 @@
       "price": 34990,
       "discountPercent": 30,
       "category": "ropa",
-      "store": "tienda-demo",
       "collections": [
         "nuevos-lanzamientos",
         "lo-mas-vendido",
@@ -168,7 +152,6 @@
       "price": 18990,
       "discountPercent": null,
       "category": "accesorios",
-      "store": "tienda-demo",
       "collections": [
         "nuevos-lanzamientos",
         "virales"
@@ -184,7 +167,6 @@
       "price": 11990,
       "discountPercent": 25,
       "category": "accesorios",
-      "store": "tienda-demo",
       "collections": [
         "nuevos-lanzamientos",
         "lo-mas-vendido"
@@ -200,7 +182,6 @@
       "price": 44990,
       "discountPercent": 10,
       "category": "accesorios",
-      "store": "tienda-demo",
       "collections": [
         "nuevos-lanzamientos"
       ],
@@ -215,7 +196,6 @@
       "price": 19990,
       "discountPercent": null,
       "category": "accesorios",
-      "store": "tienda-demo",
       "collections": [
         "nuevos-lanzamientos",
         "virales",
@@ -232,7 +212,6 @@
       "price": 24990,
       "discountPercent": 35,
       "category": "accesorios",
-      "store": "tienda-demo",
       "collections": [
         "lo-mas-vendido"
       ],
@@ -247,7 +226,6 @@
       "price": 15990,
       "discountPercent": null,
       "category": "accesorios",
-      "store": "tienda-demo",
       "collections": [],
       "createdAt": "2026-11-16T00:00:00.000Z",
       "images": 4
@@ -260,7 +238,6 @@
       "price": 9990,
       "discountPercent": null,
       "category": "hogar",
-      "store": "tienda-demo",
       "collections": [
         "virales"
       ],
@@ -275,7 +252,6 @@
       "price": 16990,
       "discountPercent": 15,
       "category": "hogar",
-      "store": "tienda-demo",
       "collections": [
         "marcas-exclusivas"
       ],
@@ -290,7 +266,6 @@
       "price": 17990,
       "discountPercent": null,
       "category": "hogar",
-      "store": "tienda-demo",
       "collections": [],
       "createdAt": "2026-11-15T21:00:00.000Z",
       "images": 4
@@ -303,7 +278,6 @@
       "price": 59990,
       "discountPercent": 20,
       "category": "hogar",
-      "store": "tienda-demo",
       "collections": [
         "virales"
       ],
@@ -318,7 +292,6 @@
       "price": 8990,
       "discountPercent": null,
       "category": "hogar",
-      "store": "tienda-demo",
       "collections": [],
       "createdAt": "2026-11-15T19:00:00.000Z",
       "images": 4
@@ -331,7 +304,6 @@
       "price": 12990,
       "discountPercent": 10,
       "category": "hogar",
-      "store": "tienda-demo",
       "collections": [
         "marcas-exclusivas"
       ],
@@ -346,7 +318,6 @@
       "price": 21990,
       "discountPercent": null,
       "category": "hogar",
-      "store": "tienda-demo",
       "collections": [
         "virales"
       ],
@@ -361,7 +332,6 @@
       "price": 49990,
       "discountPercent": 25,
       "category": "hogar",
-      "store": "tienda-demo",
       "collections": [
         "lo-mas-vendido"
       ],
@@ -376,7 +346,6 @@
       "price": 9990,
       "discountPercent": null,
       "category": "papeleria",
-      "store": "tienda-demo",
       "collections": [],
       "createdAt": "2026-11-15T15:00:00.000Z",
       "images": 4
@@ -389,7 +358,6 @@
       "price": 13990,
       "discountPercent": 15,
       "category": "papeleria",
-      "store": "tienda-demo",
       "collections": [
         "virales",
         "marcas-exclusivas"
@@ -405,7 +373,6 @@
       "price": 15990,
       "discountPercent": 30,
       "category": "papeleria",
-      "store": "tienda-demo",
       "collections": [
         "lo-mas-vendido"
       ],
@@ -420,7 +387,6 @@
       "price": 19990,
       "discountPercent": null,
       "category": "papeleria",
-      "store": "tienda-demo",
       "collections": [],
       "createdAt": "2026-11-15T12:00:00.000Z",
       "images": 4
@@ -433,7 +399,6 @@
       "price": 11990,
       "discountPercent": null,
       "category": "despensa",
-      "store": "tienda-demo",
       "collections": [
         "virales"
       ],
@@ -448,7 +413,6 @@
       "price": 9990,
       "discountPercent": 10,
       "category": "despensa",
-      "store": "tienda-demo",
       "collections": [
         "marcas-exclusivas"
       ],
@@ -463,7 +427,6 @@
       "price": 6990,
       "discountPercent": null,
       "category": "despensa",
-      "store": "tienda-demo",
       "collections": [],
       "createdAt": "2026-11-15T09:00:00.000Z",
       "images": 4
@@ -476,7 +439,6 @@
       "price": 7990,
       "discountPercent": 20,
       "category": "despensa",
-      "store": "tienda-demo",
       "collections": [
         "virales"
       ],
@@ -491,7 +453,6 @@
       "price": 59990,
       "discountPercent": 30,
       "category": "tecnologia",
-      "store": "otra-tienda",
       "collections": [
         "lo-mas-vendido"
       ],
@@ -506,7 +467,6 @@
       "price": 39990,
       "discountPercent": 15,
       "category": "tecnologia",
-      "store": "otra-tienda",
       "collections": [
         "marcas-exclusivas"
       ],
@@ -521,7 +481,6 @@
       "price": 24990,
       "discountPercent": null,
       "category": "tecnologia",
-      "store": "otra-tienda",
       "collections": [
         "virales"
       ],
@@ -536,7 +495,6 @@
       "price": 19990,
       "discountPercent": 10,
       "category": "tecnologia",
-      "store": "otra-tienda",
       "collections": [],
       "createdAt": "2026-11-15T04:00:00.000Z",
       "images": 4
@@ -549,7 +507,6 @@
       "price": 69990,
       "discountPercent": 20,
       "category": "tecnologia",
-      "store": "otra-tienda",
       "collections": [],
       "createdAt": "2026-11-15T03:00:00.000Z",
       "images": 4
@@ -562,7 +519,6 @@
       "price": 22990,
       "discountPercent": null,
       "category": "tecnologia",
-      "store": "otra-tienda",
       "collections": [
         "virales",
         "marcas-exclusivas"
@@ -578,7 +534,6 @@
       "price": 17990,
       "discountPercent": 25,
       "category": "deporte",
-      "store": "otra-tienda",
       "collections": [
         "lo-mas-vendido"
       ],
@@ -593,7 +548,6 @@
       "price": 27990,
       "discountPercent": null,
       "category": "deporte",
-      "store": "otra-tienda",
       "collections": [],
       "createdAt": "2026-11-15T00:00:00.000Z",
       "images": 4
@@ -606,7 +560,6 @@
       "price": 12990,
       "discountPercent": 15,
       "category": "deporte",
-      "store": "otra-tienda",
       "collections": [
         "virales"
       ],
@@ -621,7 +574,6 @@
       "price": 9990,
       "discountPercent": null,
       "category": "deporte",
-      "store": "otra-tienda",
       "collections": [
         "marcas-exclusivas"
       ],
@@ -636,7 +588,6 @@
       "price": 64990,
       "discountPercent": 35,
       "category": "deporte",
-      "store": "otra-tienda",
       "collections": [
         "lo-mas-vendido"
       ],
@@ -651,7 +602,6 @@
       "price": 34990,
       "discountPercent": 10,
       "category": "deporte",
-      "store": "otra-tienda",
       "collections": [
         "virales"
       ],

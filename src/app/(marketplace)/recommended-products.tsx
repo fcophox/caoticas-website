@@ -16,6 +16,7 @@ import {
 import { cn } from "@/lib/utils";
 import { DiscountTag, ProductImage, PublicPrice } from "@/components/marketplace/product-card";
 import type { MarketplaceCollection, MarketplaceProduct } from "@/lib/marketplace/data";
+import { cart, openCartDrawer, toCartItem } from "@/lib/cart/store";
 
 /** Ícono de cada pestaña. Una colección nueva sin entrada aquí usa la etiqueta. */
 const ICONS: Record<string, LucideIcon> = {
@@ -125,8 +126,6 @@ export function RecommendedProducts({ collections }: { collections: MarketplaceC
 }
 
 function RecommendedCard({ product: p }: { product: MarketplaceProduct }) {
-  const [notice, setNotice] = useState(false);
-
   return (
     <li className="w-[70%] shrink-0 snap-start sm:w-[45%] md:w-[31%] lg:w-[calc(25%-12px)]">
       <article className="flex h-full flex-col overflow-hidden rounded-[var(--radius)] border bg-card">
@@ -139,9 +138,11 @@ function RecommendedCard({ product: p }: { product: MarketplaceProduct }) {
             />
           </div>
           <div className="flex flex-1 flex-col p-4">
-            <p className="truncate text-xs uppercase tracking-wide text-muted-foreground">
-              {p.store.name}
-            </p>
+            {p.category && (
+              <p className="truncate text-xs uppercase tracking-wide text-muted-foreground">
+                {p.category.name}
+              </p>
+            )}
             <h3 className="mt-1 line-clamp-2 font-medium leading-snug group-hover:underline">
               {p.name}
             </h3>
@@ -155,17 +156,15 @@ function RecommendedCard({ product: p }: { product: MarketplaceProduct }) {
         <div className="px-4 pb-4">
           <button
             type="button"
-            onClick={() => setNotice(true)}
+            onClick={() => {
+              cart.add(toCartItem(p));
+              openCartDrawer();
+            }}
             className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-[var(--radius)] bg-primary text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
             <ShoppingBag className="size-4" />
             Agregar
           </button>
-          {notice && (
-            <p role="status" className="mt-2 text-center text-xs text-muted-foreground">
-              El carrito estará disponible pronto.
-            </p>
-          )}
         </div>
       </article>
     </li>

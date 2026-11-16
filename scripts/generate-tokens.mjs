@@ -151,7 +151,7 @@ export const THEME_MODES = ["dark", "light"] as const;
 export type ThemeMode = (typeof THEME_MODES)[number];
 
 /** Tema aplicado cuando el usuario no ha elegido ninguno. */
-export const DEFAULT_THEME: ThemeMode = "dark";
+export const DEFAULT_THEME: ThemeMode = "light";
 `;
 }
 

@@ -1,32 +1,45 @@
+import { Suspense } from "react";
 import Link from "next/link";
-import { Store } from "lucide-react";
+import { ShoppingBag } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CartButton } from "@/components/cart/cart-button";
 import { CartDrawer } from "@/components/cart/cart-drawer";
+import { HeaderSearch } from "@/components/marketplace/header-search";
+import { listPublicProducts } from "@/lib/marketplace/data";
 import { HowItWorks } from "@/components/marketplace/how-it-works";
-import { APP_NAME } from "@/lib/app-config";
+import { APP_NAME, THEME_TOGGLE_ENABLED } from "@/lib/app-config";
 
 /** Marco del sitio: encabezado, contenido, "Cómo comprar" y pie. */
-export default function MarketplaceLayout({ children }: { children: React.ReactNode }) {
+export default async function MarketplaceLayout({ children }: { children: React.ReactNode }) {
   const year = new Date().getFullYear();
+  // El buscador filtra en el navegador: con el catálogo actual es instantáneo.
+  const products = await listPublicProducts();
 
   return (
     <div className="flex min-h-dvh flex-col bg-background text-foreground">
       <header className="sticky top-0 z-30 border-b bg-background/85 backdrop-blur">
-        <div className="mx-auto flex h-14 max-w-7xl items-center gap-4 px-4 md:px-6">
-          <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
-            <Store className="size-5" />
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2.5 md:flex-nowrap md:px-6">
+          <Link href="/" className="flex shrink-0 items-center gap-2 font-semibold tracking-tight">
+            <ShoppingBag className="size-5" />
             {APP_NAME}
           </Link>
 
-          <nav className="ml-auto flex items-center gap-2">
+          {/* En celular baja a su propia fila, a todo el ancho. */}
+          <Suspense fallback={<SearchPlaceholder />}>
+            <HeaderSearch
+              products={products}
+              className="order-last w-full md:order-none md:mx-auto md:max-w-xl md:flex-1"
+            />
+          </Suspense>
+
+          <nav className="ml-auto flex shrink-0 items-center gap-2 md:ml-0">
             <Link
               href="/#catalogo"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               Catálogo
             </Link>
-            <ThemeToggle />
+            {THEME_TOGGLE_ENABLED && <ThemeToggle />}
             <CartButton />
           </nav>
         </div>
@@ -43,9 +56,16 @@ export default function MarketplaceLayout({ children }: { children: React.ReactN
           <p>
             © {year} {APP_NAME}. Todos los derechos reservados.
           </p>
-          <p>¿Quieres vender aquí? Escríbenos y te creamos tu tienda.</p>
+          <p>Despachos a todo Chile · 30 días para cambios y devoluciones.</p>
         </div>
       </footer>
     </div>
+  );
+}
+
+/** Mismo tamaño que el buscador mientras hidrata, para que el encabezado no salte. */
+function SearchPlaceholder() {
+  return (
+    <div className="order-last h-10 w-full rounded-full border bg-muted/50 md:order-none md:mx-auto md:max-w-xl md:flex-1" />
   );
 }

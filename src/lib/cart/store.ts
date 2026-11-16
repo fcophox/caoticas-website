@@ -22,7 +22,6 @@ export type CartItem = {
   name: string;
   detail: string | null;
   imageUrl: string | null;
-  store: { slug: string; name: string };
   /** Precio final por unidad (con oferta si la hay). */
   unitPrice: number;
   /** Precio normal por unidad, para mostrar el ahorro. */
@@ -53,9 +52,7 @@ function isCartItem(v: unknown): v is CartItem {
     typeof o.name === "string" &&
     typeof o.unitPrice === "number" &&
     typeof o.listPrice === "number" &&
-    typeof o.quantity === "number" &&
-    !!o.store &&
-    typeof (o.store as Record<string, unknown>).name === "string"
+    typeof o.quantity === "number"
   );
 }
 
@@ -138,7 +135,6 @@ export function toCartItem(p: MarketplaceProduct, quantity = 1): CartItem {
     name: p.name,
     detail: p.detail,
     imageUrl: p.imageUrl,
-    store: p.store,
     unitPrice: effectivePrice(p),
     listPrice: p.price,
     quantity: clampQuantity(quantity),

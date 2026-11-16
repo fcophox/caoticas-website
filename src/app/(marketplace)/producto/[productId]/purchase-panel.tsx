@@ -56,7 +56,7 @@ export function PurchasePanel({ product: p }: { product: MarketplaceProduct }) {
   };
 
   const features: [string, string][] = [
-    ["Tienda", p.store.name],
+    ...(p.category ? ([["Categoría", p.category.name]] as [string, string][]) : []),
     ...(p.detail ? ([["Detalle", p.detail]] as [string, string][]) : []),
     ["Precio normal", formatPrice(p.price)],
     ...(hasOffer(p)
@@ -72,7 +72,7 @@ export function PurchasePanel({ product: p }: { product: MarketplaceProduct }) {
       {/* Identidad */}
       <div className="flex items-start gap-3">
         <div className="min-w-0 flex-1">
-          <p className="text-sm text-muted-foreground">{p.store.name}</p>
+          {p.category && <p className="text-sm text-muted-foreground">{p.category.name}</p>}
           <h1 className="mt-1 text-balance text-2xl font-semibold tracking-tight">{p.name}</h1>
         </div>
         <button
@@ -86,9 +86,6 @@ export function PurchasePanel({ product: p }: { product: MarketplaceProduct }) {
         </button>
       </div>
 
-      <p className="mt-2 inline-flex items-center gap-1 rounded bg-muted px-1.5 py-0.5 text-sm">
-        Vendido por <span className="font-medium underline underline-offset-2">{p.store.name}</span>
-      </p>
       {p.detail && <p className="mt-2 text-sm text-muted-foreground">{p.detail}</p>}
 
       {/* Precio */}

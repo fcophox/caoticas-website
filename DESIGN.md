@@ -39,9 +39,13 @@ solo hex hardcodeado en `globals.css` ni en los componentes.
 
 ---
 
-## Temas: oscuro por defecto, claro opcional
+## Temas: claro por defecto, oscuro opcional
 
-El sitio es **oscuro por defecto**. Un sufijo `.dark` / `.light` en `tokens.yml`
+El sitio es **claro por defecto** (`DEFAULT_THEME` en
+[`scripts/generate-tokens.mjs`](scripts/generate-tokens.mjs)) y el conmutador
+está oculto (`THEME_TOGGLE_ENABLED` en [`app-config.ts`](src/lib/app-config.ts)).
+El CSS conserva los dos temas, así que reactivar el oscuro es cambiar esas
+dos constantes. Un sufijo `.dark` / `.light` en `tokens.yml`
 reparte el valor entre los dos temas; sin sufijo aplica a ambos.
 
 | Selector | Contiene |
@@ -50,8 +54,8 @@ reparte el valor entre los dos temas; sin sufijo aplica a ambos.
 | `.light` | Sólo los overrides del tema claro |
 | `.dark` | Los mismos valores oscuros, para anidar un bloque oscuro dentro de una página clara |
 
-Poner el tema oscuro en `:root` es lo que hace que sea el defecto real: si el
-CSS del tema claro nunca llega, la interfaz sigue siendo la correcta.
+Los valores oscuros viven en `:root` por herencia del diseño original; el tema
+real lo decide la clase que el servidor pinta en `<html>` (`DEFAULT_THEME`).
 
 **Cómo se aplica.** `<html>` se renderiza en el servidor con la clase del tema
 por defecto ([`layout.tsx`](src/app/layout.tsx)). Antes del primer paint,
@@ -182,7 +186,7 @@ tema solo.
 
 | Contexto | Tokens principales | Notas |
 |---|---|---|
-| **Superficies** | `background`, `foreground`, `card`, `muted`, `border` | Core del tema, oscuro por defecto |
+| **Superficies** | `background`, `foreground`, `card`, `muted`, `border` | Core del tema, claro por defecto |
 | **Acentos** | `primary`, `secondary`, `accent`, `ring`, `radius` | Botones, etiquetas de descuento, foco |
 | **Estados** | `destructive`, `warn`, `success`, `danger` (+ `-surface`) | Badges y callouts |
 | **Identidad exacta** | `brand-primary`, `brand-secondary` | El hex de la marca sin ajuste de contraste |

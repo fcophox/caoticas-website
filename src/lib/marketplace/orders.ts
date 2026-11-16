@@ -49,7 +49,6 @@ export type CheckoutInput = {
 export type OrderLine = {
   productId: string;
   name: string;
-  storeName: string;
   imageUrl: string | null;
   unitPrice: number;
   quantity: number;
@@ -153,7 +152,6 @@ export async function placeOrder(input: CheckoutInput): Promise<PlaceOrderResult
     lines.push({
       productId: product.id,
       name: product.name,
-      storeName: product.store.name,
       imageUrl: product.imageUrl,
       unitPrice,
       listPrice: product.price,
@@ -181,7 +179,6 @@ export async function placeOrder(input: CheckoutInput): Promise<PlaceOrderResult
     lines: lines.map((l) => ({
       productId: l.productId,
       name: l.name,
-      storeName: l.storeName,
       imageUrl: l.imageUrl,
       unitPrice: l.unitPrice,
       quantity: l.quantity,

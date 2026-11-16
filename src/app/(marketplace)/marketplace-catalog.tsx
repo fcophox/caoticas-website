@@ -9,6 +9,7 @@ import {
   hasOffer,
 } from "@/components/marketplace/product-card";
 import type { MarketplaceProduct } from "@/lib/marketplace/data";
+import { matchesQuery } from "@/lib/marketplace/search";
 
 type Sort = "recent" | "price-asc" | "price-desc" | "discount";
 
@@ -29,34 +30,25 @@ type Props = {
   title?: string;
   /** Texto del estado vacío (p. ej. una categoría todavía sin productos). */
   emptyMessage?: string;
+  /** Búsqueda con la que arranca (la página /buscar). */
+  initialQuery?: string;
 };
 
 export function MarketplaceCatalog({
   products,
   title = "Catálogo",
   emptyMessage = "Estamos preparando el catálogo. Vuelve en unos días.",
+  initialQuery = "",
 }: Props) {
-  const [query, setQuery] = useState("");
-  const [store, setStore] = useState<string>("all");
+  const [query, setQuery] = useState(initialQuery);
   const [onlyOffers, setOnlyOffers] = useState(false);
   const [sort, setSort] = useState<Sort>("recent");
 
-  const stores = useMemo(() => {
-    const map = new Map<string, string>();
-    for (const p of products) map.set(p.store.slug, p.store.name);
-    return [...map.entries()].sort((a, b) => a[1].localeCompare(b[1], "es"));
-  }, [products]);
-
   const visible = useMemo(() => {
-    const q = query.trim().toLowerCase();
     const list = products.filter(
       (p) =>
-        (store === "all" || p.store.slug === store) &&
         (!onlyOffers || hasOffer(p)) &&
-        (!q ||
-          [p.name, p.detail, p.description, p.store.name].some((f) =>
-            f?.toLowerCase().includes(q),
-          )),
+        matchesQuery(p, query),
     );
 
     switch (sort) {
@@ -71,7 +63,7 @@ export function MarketplaceCatalog({
       default:
         return list;
     }
-  }, [products, query, store, onlyOffers, sort]);
+  }, [products, query, onlyOffers, sort]);
 
   if (products.length === 0) {
     return (
@@ -100,29 +92,13 @@ export function MarketplaceCatalog({
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Buscar productos o tiendas"
+                placeholder="Buscar productos"
                 className="pl-9"
                 aria-label="Buscar productos"
               />
             </div>
 
             <div className="flex flex-wrap items-center gap-2 md:ml-auto">
-              {stores.length > 1 && (
-                <select
-                  value={store}
-                  onChange={(e) => setStore(e.target.value)}
-                  className={selectClass}
-                  aria-label="Filtrar por tienda"
-                >
-                  <option value="all">Todas las tiendas</option>
-                  {stores.map(([slug, name]) => (
-                    <option key={slug} value={slug}>
-                      {name}
-                    </option>
-                  ))}
-                </select>
-              )}
-
               <select
                 value={sort}
                 onChange={(e) => setSort(e.target.value as Sort)}

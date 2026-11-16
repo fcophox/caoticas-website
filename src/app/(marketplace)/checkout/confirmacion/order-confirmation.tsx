@@ -60,7 +60,7 @@ export function OrderConfirmation() {
               <div className="min-w-0">
                 <p className="truncate font-medium">{l.name}</p>
                 <p className="text-xs text-muted-foreground">
-                  {l.storeName} · {l.quantity} × {formatPrice(l.unitPrice)}
+                  {l.quantity} × {formatPrice(l.unitPrice)}
                 </p>
               </div>
               <p className="tabular-nums">{formatPrice(l.unitPrice * l.quantity)}</p>

@@ -11,9 +11,9 @@ import { cn } from "@/lib/utils";
 const SLIDES = [
   {
     image: "/hero/slide-1.svg",
-    eyebrow: "Marketplace",
-    title: "Descubre productos únicos de tiendas independientes",
-    text: "Explora el catálogo, compara precios y encuentra ofertas de creadores locales.",
+    eyebrow: "Catálogo",
+    title: "Descubre productos únicos para ti y tu casa",
+    text: "Explora el catálogo, compara precios y encuentra las mejores ofertas.",
     cta: "Ver catálogo",
   },
   {
@@ -27,7 +27,7 @@ const SLIDES = [
     image: "/hero/slide-3.svg",
     eyebrow: "Envíos",
     title: "Elige, pide y recíbelo en la puerta de tu casa",
-    text: "Las tiendas preparan tu pedido y te lo despachan sin complicaciones.",
+    text: "Preparamos tu pedido y te lo despachamos sin complicaciones.",
     cta: "Empezar a comprar",
   },
 ];

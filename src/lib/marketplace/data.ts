@@ -17,7 +17,6 @@ export type MarketplaceProduct = {
   salePrice: number | null;
   discountPercent: number | null;
   imageUrl: string | null;
-  store: { slug: string; name: string };
   category: { slug: string; name: string } | null;
   createdAt: string;
 };
@@ -40,7 +39,6 @@ export type MarketplaceCollection = {
 
 type RawProduct = (typeof catalog.products)[number];
 
-const stores = new Map(catalog.stores.map((s) => [s.slug, s]));
 const categories = new Map(catalog.categories.map((c) => [c.slug, c]));
 
 const imagePath = (id: string, view: number) => `/products/${id}-${view}.svg`;
@@ -48,7 +46,6 @@ const imagePath = (id: string, view: number) => `/products/${id}-${view}.svg`;
 function toProduct(raw: RawProduct): MarketplaceProductDetail {
   const discount = raw.discountPercent;
   const salePrice = discount ? Math.round(raw.price * (1 - discount / 100)) : null;
-  const store = stores.get(raw.store) ?? { slug: raw.store, name: raw.store };
   const category = raw.category ? categories.get(raw.category) : undefined;
   const images = Array.from({ length: raw.images }, (_, i) => imagePath(raw.id, i));
 
@@ -62,7 +59,6 @@ function toProduct(raw: RawProduct): MarketplaceProductDetail {
     discountPercent: discount,
     imageUrl: images[0] ?? null,
     images,
-    store: { slug: store.slug, name: store.name },
     category: category ? { slug: category.slug, name: category.name } : null,
     createdAt: raw.createdAt,
   };
@@ -89,12 +85,12 @@ export async function getPublicProduct(productId: string): Promise<MarketplacePr
   return PRODUCTS.find((p) => p.id === productId) ?? null;
 }
 
-/** Más productos de la misma tienda para la ficha. */
+/** Más productos de la misma categoría para la ficha. */
 export async function listRelatedProducts(
   product: MarketplaceProduct,
   limit = 6,
 ): Promise<MarketplaceProduct[]> {
-  return PRODUCTS.filter((p) => p.store.slug === product.store.slug && p.id !== product.id)
+  return PRODUCTS.filter((p) => p.id !== product.id && p.category?.slug === product.category?.slug)
     .slice(0, limit)
     .map(summary);
 }

@@ -244,7 +244,6 @@ export function CheckoutForm() {
               </span>
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-medium">{i.name}</p>
-                <p className="truncate text-xs text-muted-foreground">{i.store.name}</p>
               </div>
               <p className="text-sm tabular-nums">{formatPrice(i.unitPrice * i.quantity)}</p>
             </li>

@@ -1,23 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ShieldCheck, ShoppingBag, Store } from "lucide-react";
+import { ArrowLeft, ShieldCheck, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CartLine } from "@/components/cart/cart-line";
 import { OrderSummary } from "@/components/cart/order-summary";
 import { DEFAULT_SHIPPING, cartTotals } from "@/lib/cart/pricing";
-import { cart, useCart, useCartReady, type CartItem } from "@/lib/cart/store";
-
-/** Agrupa por tienda: en un marketplace cada tienda prepara su parte del pedido. */
-function groupByStore(items: CartItem[]) {
-  const groups = new Map<string, { name: string; items: CartItem[] }>();
-  for (const item of items) {
-    const group = groups.get(item.store.slug) ?? { name: item.store.name, items: [] };
-    group.items.push(item);
-    groups.set(item.store.slug, group);
-  }
-  return [...groups.entries()];
-}
+import { cart, useCart, useCartReady } from "@/lib/cart/store";
 
 export function CartView() {
   const items = useCart();
@@ -45,24 +34,16 @@ export function CartView() {
     );
   }
 
-  const groups = groupByStore(items);
-
   return (
     <div className="mt-8 grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_22rem]">
       <div className="space-y-4">
-        {groups.map(([slug, group]) => (
-          <section key={slug} className="rounded-[calc(var(--radius)+4px)] border bg-card px-5">
-            <h2 className="flex items-center gap-2 border-b py-3 text-sm font-medium">
-              <Store className="size-4 text-muted-foreground" />
-              {group.name}
-            </h2>
-            <ul className="divide-y">
-              {group.items.map((item) => (
-                <CartLine key={item.productId} item={item} />
-              ))}
-            </ul>
-          </section>
-        ))}
+        <section className="rounded-[calc(var(--radius)+4px)] border bg-card px-5">
+          <ul className="divide-y">
+            {items.map((item) => (
+              <CartLine key={item.productId} item={item} />
+            ))}
+          </ul>
+        </section>
 
         <div className="flex flex-wrap items-center justify-between gap-3">
           <Link

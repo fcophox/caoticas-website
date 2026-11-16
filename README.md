@@ -1,6 +1,6 @@
-# Landing — marketplace público
+# Landing — catálogo de productos
 
-Sitio público del marketplace (portada, páginas de producto y de categoría),
+Sitio público (portada, páginas de producto y de categoría),
 separado del CMS. Next.js 15 + Tailwind 4, sin base de datos: el contenido de
 ejemplo vive en `src/lib/marketplace/catalog.json`.
 
@@ -16,13 +16,13 @@ npm run dev        # http://localhost:3000
 | `/` | `src/app/(marketplace)/page.tsx` — hero, categorías, catálogo, tendencias, recomendados |
 | `/producto/[id]` | `src/app/(marketplace)/producto/[productId]/` — galería + cuadro resumen |
 | `/categoria/[slug]` | `src/app/(marketplace)/categoria/[slug]/page.tsx` |
-| `/carrito` | `src/app/(marketplace)/carrito/` — líneas agrupadas por tienda + resumen |
+| `/carrito` | `src/app/(marketplace)/carrito/` — productos + resumen |
 | `/checkout` | `src/app/(marketplace)/checkout/` — contacto, despacho, envío y pago |
 | `/checkout/confirmacion` | `src/app/(marketplace)/checkout/confirmacion/` |
 
 ## Contenido
 
-- **Productos, categorías, tiendas y colecciones:** `src/lib/marketplace/catalog.json`.
+- **Productos, categorías y colecciones:** `src/lib/marketplace/catalog.json`.
 - **Imágenes de productos:** `public/products/<id>-<n>.svg` (n = 0 es la portada).
   Se regeneran con `npm run images`; reemplázalas por fotos reales cuando las tengas.
 - **Hero:** textos e imágenes en `src/app/(marketplace)/hero-carousel.tsx` y `public/hero/`.

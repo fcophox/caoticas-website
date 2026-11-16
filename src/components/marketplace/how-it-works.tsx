@@ -14,7 +14,7 @@ const STEPS = [
   {
     icon: Truck,
     title: "Te enviamos el pedido",
-    text: "La tienda prepara tu compra y la despacha. Te avisamos cuando vaya en camino.",
+    text: "Preparamos tu compra y la despachamos. Te avisamos cuando vaya en camino.",
   },
   {
     icon: House,
@@ -23,7 +23,7 @@ const STEPS = [
   },
 ];
 
-/** Sección explicativa "Cómo comprar". Va al final de cada página del marketplace. */
+/** Sección explicativa "Cómo comprar". Va al final de cada página del sitio. */
 export function HowItWorks() {
   return (
     <section aria-labelledby="como-comprar" className="border-t bg-muted/40">

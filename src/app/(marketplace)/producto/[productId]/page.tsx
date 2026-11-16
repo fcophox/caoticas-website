@@ -56,7 +56,7 @@ export default async function PublicProductPage({ params }: Props) {
       {related.length > 0 && (
         <section className="mt-16">
           <h2 className="mb-4 text-xl font-semibold tracking-tight">
-            Más de {product.store.name}
+            {product.category ? `Más de ${product.category.name}` : "También te puede gustar"}
           </h2>
           <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-6">
             {related.map((p) => (

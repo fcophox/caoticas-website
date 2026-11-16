@@ -60,7 +60,7 @@ export function TrendsSection() {
           Las tendencias que están marcando la diferencia
         </h2>
         <p className="mt-3 text-pretty text-muted-foreground">
-          Descubre los productos, tiendas y categorías más destacados del momento.
+          Descubre los productos y categorías más destacados del momento.
         </p>
       </div>
 

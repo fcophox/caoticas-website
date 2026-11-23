@@ -43,7 +43,7 @@ export function SiteFooter({ categories }: { categories: MarketplaceCategory[] }
           {/* Marca y redes */}
           <div className="col-span-2 max-w-sm md:col-span-1">
             <Link href="/" aria-label={`${APP_NAME}, ir al inicio`} className="inline-flex">
-              <BrandLogo className="h-14" />
+              <BrandLogo variant="footer" className="h-28" />
             </Link>
             <p className="mt-3 text-sm text-muted-foreground">{APP_DESCRIPTION}.</p>
 

@@ -11,6 +11,7 @@
  */
 import { cache } from "react";
 import catalog from "./catalog.json";
+import { CAMPAIGN, CAMPAIGN_PRODUCTS_PER_FILTER } from "./campaign";
 import { isSupabaseConfigured, loadSupabaseCatalog } from "./supabase-source";
 
 export type MarketplaceProduct = {
@@ -152,10 +153,14 @@ export async function listPublicCategories(): Promise<MarketplaceCategory[]> {
 /** Tope por pestaña: el carrusel es una vitrina, no el catálogo completo. */
 const COLLECTION_LIMIT = 20;
 
-/** Colecciones especiales con sus productos. Las vacías no se devuelven. */
+/**
+ * Colecciones especiales con sus productos. Las vacías no se devuelven, y la
+ * de la campaña tampoco: tiene su propia sección (`getPublicCampaign`).
+ */
 export async function listPublicCollections(): Promise<MarketplaceCollection[]> {
   const { collections, products } = await loadCatalog();
   return collections
+    .filter((c) => c.slug !== CAMPAIGN.collection)
     .map((c) => ({
       slug: c.slug,
       name: c.name,
@@ -167,11 +172,39 @@ export async function listPublicCollections(): Promise<MarketplaceCollection[]> 
     .filter((c) => c.products.length > 0);
 }
 
+export type CampaignFilter = { label: string; category: string; products: MarketplaceProduct[] };
+
+export type PublicCampaign = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  filters: CampaignFilter[];
+};
+
+/**
+ * La campaña especial del home con los productos de cada subfiltro (ver
+ * `campaign.ts`). `null` si la colección no tiene productos.
+ */
+export async function getPublicCampaign(): Promise<PublicCampaign | null> {
+  const inCampaign = (await loadCatalog()).products.filter((p) =>
+    p.collections.includes(CAMPAIGN.collection),
+  );
+  const filters = CAMPAIGN.filters
+    .slice(0, 4)
+    .map((f) => ({
+      label: f.label,
+      category: f.category,
+      products: inCampaign
+        .filter((p) => p.category?.slug === f.category)
+        .slice(0, CAMPAIGN_PRODUCTS_PER_FILTER)
+        .map(summary),
+    }))
+    .filter((f) => f.products.length > 0);
+  if (filters.length === 0) return null;
+  return { eyebrow: CAMPAIGN.eyebrow, title: CAMPAIGN.title, description: CAMPAIGN.description, filters };
+}
+
 /** Rutas a generar en el build. */
 export async function allProductIds(): Promise<string[]> {
   return (await loadCatalog()).products.map((p) => p.id);
-}
-
-export async function allCategorySlugs(): Promise<string[]> {
-  return (await loadCatalog()).categories.map((c) => c.slug);
 }

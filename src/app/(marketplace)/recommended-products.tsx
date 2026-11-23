@@ -1,22 +1,19 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import {
   ChevronLeft,
   ChevronRight,
   Flame,
   Megaphone,
-  ShoppingBag,
   Sparkles,
   Star,
   Tag,
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { DiscountTag, ProductImage, PublicPrice } from "@/components/marketplace/product-card";
+import { ShopCard } from "@/components/marketplace/shop-card";
 import type { MarketplaceCollection, MarketplaceProduct } from "@/lib/marketplace/data";
-import { cart, openCartDrawer, toCartItem } from "@/lib/cart/store";
 
 /** Ícono de cada pestaña. Una colección nueva sin entrada aquí usa la etiqueta. */
 const ICONS: Record<string, LucideIcon> = {
@@ -125,48 +122,10 @@ export function RecommendedProducts({ collections }: { collections: MarketplaceC
   );
 }
 
-function RecommendedCard({ product: p }: { product: MarketplaceProduct }) {
+function RecommendedCard({ product }: { product: MarketplaceProduct }) {
   return (
     <li className="w-[70%] shrink-0 snap-start sm:w-[45%] md:w-[31%] lg:w-[calc(25%-12px)]">
-      <article className="flex h-full flex-col overflow-hidden rounded-[var(--radius)] border bg-card">
-        <Link href={`/producto/${p.id}`} className="group flex flex-1 flex-col focus-visible:outline-none">
-          <div className="relative">
-            <ProductImage
-              product={p}
-              className="aspect-[4/3]"
-              sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 70vw"
-            />
-          </div>
-          <div className="flex flex-1 flex-col p-4">
-            {p.category && (
-              <p className="truncate text-xs uppercase tracking-wide text-muted-foreground">
-                {p.category.name}
-              </p>
-            )}
-            <h3 className="mt-1 line-clamp-2 font-medium leading-snug group-hover:underline">
-              {p.name}
-            </h3>
-            <div className="mt-auto flex flex-wrap items-center gap-2 pt-4">
-              <PublicPrice product={p} />
-              <DiscountTag product={p} />
-            </div>
-          </div>
-        </Link>
-
-        <div className="px-4 pb-4">
-          <button
-            type="button"
-            onClick={() => {
-              cart.add(toCartItem(p));
-              openCartDrawer();
-            }}
-            className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-[var(--radius)] bg-primary text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            <ShoppingBag className="size-4" />
-            Agregar
-          </button>
-        </div>
-      </article>
+      <ShopCard product={product} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 70vw" />
     </li>
   );
 }

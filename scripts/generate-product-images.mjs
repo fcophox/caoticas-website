@@ -50,7 +50,7 @@ function wrap(text, max = 14) {
 
 const VIEWS = ["", "Vista frontal", "Detalle", "En uso"];
 
-function productSvg(name, category, index, view = 0) {
+function productSvg(name, category, index, view = 0, label = category) {
   const palette = PALETTES[category] ?? ["#64748b", "#334155"];
   // Cada vista invierte o gira el degradado para que la galería no sea idéntica.
   const [from, to] = view % 2 ? [palette[1], palette[0]] : palette;
@@ -73,7 +73,7 @@ function productSvg(name, category, index, view = 0) {
   <rect width="800" height="800" fill="url(#g)"/>
   <circle cx="${cx}" cy="${cy}" r="220" fill="#fff" opacity="0.08"/>
   <circle cx="${800 - cx}" cy="${800 - cy}" r="140" fill="#fff" opacity="0.06"/>
-  <text x="400" y="110" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" letter-spacing="6" fill="#fff" opacity="0.75">${escapeXml(category.toUpperCase())}</text>
+  <text x="400" y="110" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" letter-spacing="6" fill="#fff" opacity="0.75">${escapeXml(label.toUpperCase())}</text>
   <text text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="64" fill="#fff">${tspans}</text>
   ${viewLabel}
 </svg>`;
@@ -83,8 +83,10 @@ mkdirSync("public/products", { recursive: true });
 let files = 0;
 catalog.products.forEach((p, i) => {
   const category = categoryName[p.category] ?? "Otros";
+  // Los sets de la campaña llevan su nombre arriba en vez de la categoría.
+  const label = p.collections.includes("sets-de-navidad") ? "Set de Navidad" : category;
   for (let view = 0; view < p.images; view++) {
-    writeFileSync(`public/products/${p.id}-${view}.svg`, productSvg(p.name, category, i, view));
+    writeFileSync(`public/products/${p.id}-${view}.svg`, productSvg(p.name, category, i, view, label));
     files++;
   }
 });

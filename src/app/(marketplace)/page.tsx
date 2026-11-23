@@ -1,5 +1,6 @@
 import { BadgePercent, LayoutGrid, Package, Truck } from "lucide-react";
 import {
+  getPublicCampaign,
   listPublicCategories,
   listPublicCollections,
   listPublicProducts,
@@ -10,6 +11,7 @@ import { HeroCarousel } from "./hero-carousel";
 import { RecommendedProducts } from "./recommended-products";
 import { TrendsSection } from "./trends-section";
 import { CategoryCircles, withCounts } from "./category-circles";
+import { CampaignSection } from "./campaign-section";
 
 export const metadata = {
   title: { absolute: APP_NAME },
@@ -17,10 +19,11 @@ export const metadata = {
 };
 
 export default async function MarketplaceHome() {
-  const [products, categories, collections] = await Promise.all([
+  const [products, categories, collections, campaign] = await Promise.all([
     listPublicProducts(),
     listPublicCategories(),
     listPublicCollections(),
+    getPublicCampaign(),
   ]);
   const offerCount = products.filter(hasOffer).length;
   const categoryCount = withCounts(categories, products).length;
@@ -51,6 +54,7 @@ export default async function MarketplaceHome() {
 
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <CategoryCircles categories={withCounts(categories, products)} />
+        {campaign && <CampaignSection campaign={campaign} />}
         <TrendsSection />
         {/* Va al final de la portada: justo encima de "Cómo comprar". */}
         <RecommendedProducts collections={collections} />

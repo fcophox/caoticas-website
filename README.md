@@ -13,7 +13,7 @@ npm run dev        # http://localhost:3000
 
 | Ruta | Archivo |
 |---|---|
-| `/` | `src/app/(marketplace)/page.tsx` — hero, categorías, tendencias, recomendados |
+| `/` | `src/app/(marketplace)/page.tsx` — hero, categorías, campaña especial, tendencias, recomendados |
 | `/catalogo` | `src/app/(marketplace)/catalogo/` — filtros a la izquierda (búsqueda, categorías, precio, ofertas) y grilla de 4 columnas. Los filtros viven en la URL: `?q=`, `?categoria=`, `?precio=`, `?ofertas=1` |
 | `/producto/[id]` | `src/app/(marketplace)/producto/[productId]/` — galería + cuadro resumen |
 | `/carrito` | `src/app/(marketplace)/carrito/` — productos + resumen |
@@ -30,6 +30,9 @@ npm run dev        # http://localhost:3000
   Se regeneran con `npm run images`; reemplázalas por fotos reales cuando las tengas.
 - **Hero:** textos e imágenes en `src/app/(marketplace)/hero-carousel.tsx` y `public/hero/`.
 - **Tendencias:** lista `TRENDS` en `src/app/(marketplace)/trends-section.tsx`.
+- **Campaña especial del home** (hoy "Sets de Navidad"): textos, colección y subfiltros
+  (máximo 4, uno por categoría) en `src/lib/marketplace/campaign.ts`. Los productos son
+  los de esa colección en el CMS.
 
 ### Supabase (CMS)
 

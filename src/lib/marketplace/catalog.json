@@ -37,6 +37,10 @@
     {
       "slug": "lo-mas-vendido",
       "name": "Lo más vendido"
+    },
+    {
+      "slug": "sets-de-navidad",
+      "name": "Sets de Navidad"
     }
   ],
   "products": [
@@ -626,6 +630,230 @@
         "nuevos-lanzamientos"
       ],
       "createdAt": "2026-11-16T12:18:00.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-cabello-frutilla",
+      "name": "Set navideño cabello frutilla",
+      "detail": "Bubbaluu · 2 productos",
+      "description": "Set de regalo de Navidad con desenredante frutilla y thermo protector frutilla. Edición de temporada, en caja de regalo.",
+      "price": 9200,
+      "discountPercent": 15,
+      "category": "cuidado-capilar",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:59.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-cabello-uva",
+      "name": "Set navideño cabello uva",
+      "detail": "Bubbaluu · 2 productos",
+      "description": "Set de regalo de Navidad con desenredante uva y thermo protector uva. Edición de temporada, en caja de regalo.",
+      "price": 9200,
+      "discountPercent": 15,
+      "category": "cuidado-capilar",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:58.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-cabello-tutti-frutti",
+      "name": "Set navideño cabello tutti frutti",
+      "detail": "Bubbaluu · 2 productos",
+      "description": "Set de regalo de Navidad con desenredante tutti frutti y bomba nutritiva tutti frutti. Edición de temporada, en caja de regalo.",
+      "price": 9400,
+      "discountPercent": 15,
+      "category": "cuidado-capilar",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:57.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-de-ampollas",
+      "name": "Set navideño de ampollas",
+      "detail": "Bubbaluu · 4 productos",
+      "description": "Set de regalo de Navidad con ampolla restauración y suavidad, ampolla hidratación intensa, ampolla para cabellos secos y ampolla protección térmica. Edición de temporada, en caja de regalo.",
+      "price": 8000,
+      "discountPercent": 15,
+      "category": "cuidado-capilar",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:56.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-de-mascarillas",
+      "name": "Set navideño de mascarillas",
+      "detail": "Bubbaluu · 7 productos",
+      "description": "Set de regalo de Navidad con mascarilla facial cereza, mascarilla facial mango, mascarilla facial kiwi, mascarilla facial piña, mascarilla facial uva, mascarilla facial tutti frutti y mascarilla facial frutilla. Edición de temporada, en caja de regalo.",
+      "price": 3400,
+      "discountPercent": 15,
+      "category": "cuidado-facial",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:55.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-parches-de-ojos",
+      "name": "Set navideño parches de ojos",
+      "detail": "Bubbaluu · 3 productos",
+      "description": "Set de regalo de Navidad con parches para ojos caviar, parches para ojos granada y parches para ojos ácido hialurónico. Edición de temporada, en caja de regalo.",
+      "price": 800,
+      "discountPercent": 15,
+      "category": "cuidado-facial",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:54.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-rutina-facial",
+      "name": "Set navideño rutina facial",
+      "detail": "Bubbaluu · 3 productos",
+      "description": "Set de regalo de Navidad con jabón facial de arroz, removedor de impurezas tutti frutti y protector solar con colágeno. Edición de temporada, en caja de regalo.",
+      "price": 9600,
+      "discountPercent": 15,
+      "category": "cuidado-facial",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:53.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-piel-limpia",
+      "name": "Set navideño piel limpia",
+      "detail": "Bubbaluu · 3 productos",
+      "description": "Set de regalo de Navidad con parches para acné morado, parches para acné pustular rosado y toallitas desmaquillantes uva. Edición de temporada, en caja de regalo.",
+      "price": 5000,
+      "discountPercent": 15,
+      "category": "cuidado-facial",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:52.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-cuerpo-frutilla",
+      "name": "Set navideño cuerpo frutilla",
+      "detail": "Bubbaluu · 2 productos",
+      "description": "Set de regalo de Navidad con crema corporal frutilla y crema de manos frutilla. Edición de temporada, en caja de regalo.",
+      "price": 6600,
+      "discountPercent": 15,
+      "category": "cuidado-corporal",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:51.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-cuerpo-uva",
+      "name": "Set navideño cuerpo uva",
+      "detail": "Bubbaluu · 2 productos",
+      "description": "Set de regalo de Navidad con crema corporal uva y crema de manos uva. Edición de temporada, en caja de regalo.",
+      "price": 6600,
+      "discountPercent": 15,
+      "category": "cuidado-corporal",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:50.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-cuerpo-tutti-frutti",
+      "name": "Set navideño cuerpo tutti frutti",
+      "detail": "Bubbaluu · 2 productos",
+      "description": "Set de regalo de Navidad con crema corporal tutti frutti y crema de manos tutti frutti. Edición de temporada, en caja de regalo.",
+      "price": 6600,
+      "discountPercent": 15,
+      "category": "cuidado-corporal",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:49.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-masaje-relajante",
+      "name": "Set navideño masaje relajante",
+      "detail": "Bubbaluu · 2 productos",
+      "description": "Set de regalo de Navidad con aceite de masaje árnica y crema de manos uva. Edición de temporada, en caja de regalo.",
+      "price": 6000,
+      "discountPercent": 15,
+      "category": "cuidado-corporal",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:48.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-trio-de-labios",
+      "name": "Set navideño trío de labios",
+      "detail": "Bubbaluu · 3 productos",
+      "description": "Set de regalo de Navidad con bálsamo + aceite de labios uva, bálsamo + aceite de labios sandía y bálsamo + aceite de labios frutilla. Edición de temporada, en caja de regalo.",
+      "price": 6600,
+      "discountPercent": 15,
+      "category": "labios",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:47.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-labios-frutilla",
+      "name": "Set navideño labios frutilla",
+      "detail": "Bubbaluu · 2 productos",
+      "description": "Set de regalo de Navidad con bálsamo + aceite de labios frutilla y crema de manos frutilla. Edición de temporada, en caja de regalo.",
+      "price": 3200,
+      "discountPercent": 15,
+      "category": "labios",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:46.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-labios-uva",
+      "name": "Set navideño labios uva",
+      "detail": "Bubbaluu · 2 productos",
+      "description": "Set de regalo de Navidad con bálsamo + aceite de labios uva y crema de manos uva. Edición de temporada, en caja de regalo.",
+      "price": 3200,
+      "discountPercent": 15,
+      "category": "labios",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:45.000Z",
+      "images": 1
+    },
+    {
+      "id": "set-navideno-labios-sandia",
+      "name": "Set navideño labios sandía",
+      "detail": "Bubbaluu · 2 productos",
+      "description": "Set de regalo de Navidad con bálsamo + aceite de labios sandía y mascarilla facial frutilla. Edición de temporada, en caja de regalo.",
+      "price": 2600,
+      "discountPercent": 15,
+      "category": "labios",
+      "collections": [
+        "sets-de-navidad"
+      ],
+      "createdAt": "2026-11-23T12:00:44.000Z",
       "images": 1
     }
   ]

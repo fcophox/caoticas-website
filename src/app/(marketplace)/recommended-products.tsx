@@ -189,7 +189,9 @@ function CarouselArrow({
       disabled={disabled}
       className={cn(
         "absolute top-1/2 hidden size-10 -translate-y-1/2 place-items-center rounded-full border bg-background shadow-sm transition-opacity hover:bg-accent disabled:pointer-events-none disabled:opacity-0 md:grid",
-        side === "left" ? "-left-5 xl:-left-14" : "-right-5 xl:-right-14",
+        // Sólo salen del contenedor desde 2xl, donde sobra margen a los lados:
+        // antes empujarían la página y aparecería scroll horizontal.
+        side === "left" ? "-left-5 2xl:-left-14" : "-right-5 2xl:-right-14",
       )}
     >
       <Icon className="size-5" />

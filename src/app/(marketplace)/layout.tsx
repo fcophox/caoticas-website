@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import { ShoppingBag } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CartButton } from "@/components/cart/cart-button";
 import { CartDrawer } from "@/components/cart/cart-drawer";
@@ -8,6 +7,7 @@ import { HeaderSearch } from "@/components/marketplace/header-search";
 import { listPublicCategories, listPublicProducts } from "@/lib/marketplace/data";
 import { SiteFooter } from "@/components/marketplace/site-footer";
 import { HowItWorks } from "@/components/marketplace/how-it-works";
+import { BrandLogo } from "@/components/marketplace/brand-logo";
 import { APP_NAME, THEME_TOGGLE_ENABLED } from "@/lib/app-config";
 
 /** Marco del sitio: encabezado, contenido, "Cómo comprar" y pie. */
@@ -22,9 +22,8 @@ export default async function MarketplaceLayout({ children }: { children: React.
     <div className="flex min-h-dvh flex-col bg-background text-foreground">
       <header className="sticky top-0 z-30 border-b bg-background/85 backdrop-blur">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2.5 md:flex-nowrap md:px-6">
-          <Link href="/" className="flex shrink-0 items-center gap-2 font-semibold tracking-tight">
-            <ShoppingBag className="size-5" />
-            {APP_NAME}
+          <Link href="/" aria-label={`${APP_NAME}, ir al inicio`} className="flex shrink-0 items-center">
+            <BrandLogo priority className="h-9" />
           </Link>
 
           {/* En celular baja a su propia fila, a todo el ancho. */}

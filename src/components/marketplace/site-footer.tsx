@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ShieldCheck, ShoppingBag, Truck } from "lucide-react";
+import { ShieldCheck, Truck } from "lucide-react";
 import {
   APP_DESCRIPTION,
   APP_NAME,
@@ -11,6 +11,7 @@ import {
   whatsappUrl,
 } from "@/lib/app-config";
 import type { MarketplaceCategory } from "@/lib/marketplace/data";
+import { BrandLogo } from "./brand-logo";
 import { InstagramIcon, TikTokIcon, WhatsAppIcon } from "./social-icons";
 
 const HELP_LINKS = [
@@ -41,9 +42,8 @@ export function SiteFooter({ categories }: { categories: MarketplaceCategory[] }
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-[1.4fr_repeat(3,1fr)]">
           {/* Marca y redes */}
           <div className="col-span-2 max-w-sm md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
-              <ShoppingBag className="size-5" />
-              {APP_NAME}
+            <Link href="/" aria-label={`${APP_NAME}, ir al inicio`} className="inline-flex">
+              <BrandLogo className="h-14" />
             </Link>
             <p className="mt-3 text-sm text-muted-foreground">{APP_DESCRIPTION}.</p>
 

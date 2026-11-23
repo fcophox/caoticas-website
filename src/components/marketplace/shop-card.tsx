@@ -2,17 +2,19 @@
 
 import Link from "next/link";
 import { ShoppingBag } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { DiscountTag, ProductImage, PublicPrice } from "@/components/marketplace/product-card";
 import type { MarketplaceProduct } from "@/lib/marketplace/data";
 import { cart, openCartDrawer, toCartItem } from "@/lib/cart/store";
 
 /**
  * Tarjeta de vitrina con botón "Agregar" (Nuestros recomendados, campaña del
- * home). El ancho lo decide el `<li>` que la contiene.
+ * home). Sin borde, con el fondo de "Cómo comprar" (`bg-muted/40`) y botón
+ * ghost con borde. El ancho lo decide el `<li>` que la contiene.
  */
 export function ShopCard({ product: p, sizes }: { product: MarketplaceProduct; sizes: string }) {
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-[var(--radius)] border bg-card">
+    <article className="flex h-full flex-col overflow-hidden rounded-[var(--radius)] bg-muted/40">
       <Link href={`/producto/${p.id}`} className="group flex flex-1 flex-col focus-visible:outline-none">
         <div className="relative">
           <ProductImage product={p} className="aspect-[4/3]" sizes={sizes} />
@@ -32,17 +34,18 @@ export function ShopCard({ product: p, sizes }: { product: MarketplaceProduct; s
       </Link>
 
       <div className="px-4 pb-4">
-        <button
+        <Button
           type="button"
+          variant="ghost"
           onClick={() => {
             cart.add(toCartItem(p));
             openCartDrawer();
           }}
-          className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-[var(--radius)] bg-primary text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+          className="h-10 w-full rounded-[var(--radius)] border border-foreground/20 font-semibold hover:border-foreground/35"
         >
           <ShoppingBag className="size-4" />
           Agregar
-        </button>
+        </Button>
       </div>
     </article>
   );

@@ -29,7 +29,7 @@ export function PublicPrice({
   return (
     <span className="flex flex-wrap items-baseline gap-x-2">
       <span className={cn(main, "font-semibold tabular-nums")}>{formatPrice(p.salePrice)}</span>
-      <span className="text-sm text-muted-foreground line-through tabular-nums">
+      <span className="text-sm font-semibold text-muted-foreground line-through tabular-nums">
         {formatPrice(p.price)}
       </span>
     </span>
@@ -82,12 +82,13 @@ export function ProductImage({
   );
 }
 
+/** Tarjeta de producto: sin borde, con el fondo de "Cómo comprar" (`bg-muted/40`). */
 export function PublicProductCard({ product: p }: { product: MarketplaceProduct }) {
   return (
     <li>
       <Link
         href={`/producto/${p.id}`}
-        className="group flex h-full flex-col overflow-hidden rounded-[var(--radius)] border bg-card transition-colors hover:border-foreground/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        className="group flex h-full flex-col overflow-hidden rounded-[var(--radius)] bg-muted/40 transition-colors hover:bg-muted/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       >
         <div className="relative">
           <ProductImage

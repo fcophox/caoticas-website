@@ -5,8 +5,8 @@ import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /**
- * Diapositivas del hero. Los fondos son el degradado de marca con formas
- * suaves; el texto va oscuro encima. Para usar fotos reales, deja los
+ * Diapositivas del hero. Los fondos son el degradado de marca, sin adornos;
+ * el texto va oscuro encima. Para usar fotos reales, deja los
  * archivos en `public/hero/` y cambia `image` (jpg/webp de ~1600×800): si la
  * foto es oscura, el texto necesita volver a blanco con un velo detrás.
  */
@@ -82,8 +82,10 @@ export function HeroCarousel({ highlights }: Props) {
       ))}
 
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        {/* Los textos comparten celda de grilla: la altura la fija el más largo y nada salta. */}
-        <div className="grid min-h-[22rem] items-center py-14 md:min-h-[28rem] md:py-20">
+        {/* Los textos comparten celda de grilla: la altura la fija el más largo.
+            El bloque se centra (`content-center`) pero cada texto arranca arriba
+            (`items-start`), así todas las diapositivas empiezan a la misma altura. */}
+        <div className="grid min-h-[22rem] content-center items-start py-14 md:min-h-[28rem] md:py-20">
           {SLIDES.map((slide, i) => {
             const isActive = i === index;
             // Un solo <h1> en la página: el de la primera diapositiva.
@@ -97,8 +99,9 @@ export function HeroCarousel({ highlights }: Props) {
                 aria-hidden={!isActive}
                 inert={!isActive}
                 className={cn(
-                  "col-start-1 row-start-1 transition-[opacity,transform] duration-700 ease-out motion-reduce:transition-none",
-                  isActive ? "translate-y-0 opacity-100 delay-200" : "translate-y-4 opacity-0",
+                  // Sólo se funden: sin desplazamiento, el texto no sube ni baja.
+                  "col-start-1 row-start-1 transition-opacity duration-700 ease-out motion-reduce:transition-none",
+                  isActive ? "opacity-100 delay-200" : "opacity-0",
                 )}
               >
                 <p className="text-sm font-medium uppercase tracking-widest text-foreground/70">

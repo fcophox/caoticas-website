@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * Mosaico de tendencias: una tarjeta grande a la izquierda y cuatro chicas a
- * la derecha. Las "imágenes" se emulan con el degradado de marca y formas; para usar
+ * la derecha. Las "imágenes" se emulan con el degradado de marca y el ícono; para usar
  * fotos reales, agrega `image` (ruta en /public o URL) a la tarjeta.
  */
 type Trend = {
@@ -86,17 +86,13 @@ function TrendCard({
         className,
       )}
     >
-      {/* Fondo: foto real si existe; si no, degradado con formas decorativas. */}
+      {/* Fondo: foto real si existe; si no, degradado de marca con el ícono. */}
       <div className="absolute inset-0 -z-10 transition-transform duration-500 ease-out group-hover:scale-105">
         {trend.image ? (
           // eslint-disable-next-line @next/next/no-img-element -- imagen decorativa configurable
           <img src={trend.image} alt="" className="size-full object-cover" />
         ) : (
           <div className="relative size-full bg-brand-gradient">
-            <span className="absolute -right-10 -top-10 size-48 rounded-full bg-on-media/40" />
-            <span className="absolute -bottom-16 left-1/4 size-56 rounded-full bg-overlay/5" />
-            {/* Anillo punteado, como el adorno de la referencia. */}
-            <span className="absolute right-8 top-6 size-20 rounded-full border-4 border-dotted border-overlay/25" />
             <Icon
               aria-hidden
               strokeWidth={1.25}

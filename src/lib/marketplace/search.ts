@@ -1,6 +1,6 @@
 /**
- * Búsqueda de productos, compartida por el buscador del encabezado, la página
- * /buscar y el filtro del catálogo. Ignora mayúsculas y tildes ("poleron"
+ * Búsqueda de productos, compartida por el buscador del encabezado y el
+ * catálogo. Ignora mayúsculas y tildes ("poleron"
  * encuentra "Polerón") y exige que estén todas las palabras.
  */
 import type { MarketplaceProduct } from "./data";

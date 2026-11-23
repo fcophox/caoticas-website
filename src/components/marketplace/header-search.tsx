@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import Image from "next/image";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { ArrowRight, ImageOff, Search, X } from "lucide-react";
 import { PublicPrice } from "@/components/marketplace/product-card";
 import { searchProducts } from "@/lib/marketplace/search";
@@ -19,26 +19,25 @@ type Props = {
 /**
  * Buscador del encabezado (patrón combobox): sugiere productos mientras se
  * escribe; Enter abre el producto marcado o, si no hay ninguno, la página
- * /buscar con todos los resultados. Flechas para moverse, Esc para cerrar.
+ * el catálogo filtrado con esa búsqueda. Flechas para moverse, Esc para cerrar.
  */
 export function HeaderSearch({ products, className }: Props) {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const listId = useId();
   const rootRef = useRef<HTMLFormElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const urlQuery = pathname === "/buscar" ? (searchParams.get("q") ?? "") : "";
-  const [query, setQuery] = useState(urlQuery);
+  const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState(-1);
 
-  // Al navegar, el campo refleja la búsqueda de /buscar o se limpia.
+  // Al navegar, el campo se limpia: en /catalogo la búsqueda sigue en el
+  // buscador de la columna de filtros.
   useEffect(() => {
-    setQuery(urlQuery);
+    setQuery("");
     setIsOpen(false);
-  }, [urlQuery, pathname]);
+  }, [pathname]);
 
   // Clic fuera cierra las sugerencias.
   useEffect(() => {
@@ -59,7 +58,7 @@ export function HeaderSearch({ products, className }: Props) {
     if (!trimmed) return;
     setIsOpen(false);
     inputRef.current?.blur();
-    router.push(`/buscar?q=${encodeURIComponent(trimmed)}`);
+    router.push(`/catalogo?q=${encodeURIComponent(trimmed)}`);
   };
 
   const goToProduct = (id: string) => {

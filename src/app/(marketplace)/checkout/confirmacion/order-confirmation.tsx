@@ -98,7 +98,7 @@ export function OrderConfirmation() {
 
       <div className="mt-8 flex justify-center">
         <Button asChild size="lg" className="rounded-full">
-          <Link href="/#catalogo">Seguir comprando</Link>
+          <Link href="/catalogo">Seguir comprando</Link>
         </Button>
       </div>
     </div>

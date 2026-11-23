@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -111,12 +112,12 @@ export function HeroCarousel({ highlights }: Props) {
                   {slide.title}
                 </Heading>
                 <p className="mt-4 max-w-xl text-pretty text-foreground/80 md:text-lg">{slide.text}</p>
-                <a
-                  href="#catalogo"
+                <Link
+                  href="/catalogo"
                   className="mt-7 inline-flex h-10 items-center rounded-[var(--radius)] bg-overlay px-5 text-sm font-semibold text-on-media transition-colors hover:bg-overlay/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
                   {slide.cta}
-                </a>
+                </Link>
               </div>
             );
           })}

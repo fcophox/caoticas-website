@@ -68,7 +68,7 @@ export function CartDrawer() {
             <p className="font-medium">Tu carro está vacío</p>
             <p className="text-sm text-muted-foreground">Explora el catálogo y agrega lo que te guste.</p>
             <Button asChild variant="outline" className="mt-2 rounded-full">
-              <Link href="/#catalogo" onClick={closeCartDrawer}>
+              <Link href="/catalogo" onClick={closeCartDrawer}>
                 Ver catálogo
               </Link>
             </Button>

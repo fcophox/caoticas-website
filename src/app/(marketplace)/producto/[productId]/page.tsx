@@ -37,7 +37,7 @@ export default async function PublicProductPage({ params }: Props) {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-12">
       <Link
-        href="/#catalogo"
+        href="/catalogo"
         className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" />

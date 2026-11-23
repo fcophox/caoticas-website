@@ -134,7 +134,7 @@ otra dirección, usa los colores sueltos: `bg-linear-to-r from-gradient-from to-
 | Fondos del hero | [`public/hero/slide-*.svg`](public/hero) (escrito a mano en el SVG) |
 | Círculos de categorías | [`category-circles.tsx`](src/app/(marketplace)/category-circles.tsx) |
 | Tarjetas de tendencias sin foto | [`trends-section.tsx`](src/app/(marketplace)/trends-section.tsx) |
-| Encabezado de cada categoría | [`categoria/[slug]/page.tsx`](src/app/(marketplace)/categoria/[slug]/page.tsx) |
+| Encabezado del catálogo | [`catalogo/page.tsx`](src/app/(marketplace)/catalogo/page.tsx) |
 
 **Contraste.** Es un fondo claro en ambos temas: encima va texto e íconos
 `foreground` (o `overlay`), nunca `on-media` (blanco). `muted-foreground`

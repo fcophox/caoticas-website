@@ -13,12 +13,15 @@ npm run dev        # http://localhost:3000
 
 | Ruta | Archivo |
 |---|---|
-| `/` | `src/app/(marketplace)/page.tsx` — hero, categorías, catálogo, tendencias, recomendados |
+| `/` | `src/app/(marketplace)/page.tsx` — hero, categorías, tendencias, recomendados |
+| `/catalogo` | `src/app/(marketplace)/catalogo/` — filtros a la izquierda (búsqueda, categorías, precio, ofertas) y grilla de 4 columnas. Los filtros viven en la URL: `?q=`, `?categoria=`, `?precio=`, `?ofertas=1` |
 | `/producto/[id]` | `src/app/(marketplace)/producto/[productId]/` — galería + cuadro resumen |
-| `/categoria/[slug]` | `src/app/(marketplace)/categoria/[slug]/page.tsx` |
 | `/carrito` | `src/app/(marketplace)/carrito/` — productos + resumen |
 | `/checkout` | `src/app/(marketplace)/checkout/` — contacto, despacho, envío y pago |
 | `/checkout/confirmacion` | `src/app/(marketplace)/checkout/confirmacion/` |
+
+`/categoria/[slug]` y `/buscar` redirigen a `/catalogo` con el filtro equivalente
+(`next.config.ts`), para que los enlaces viejos sigan funcionando.
 
 ## Contenido
 

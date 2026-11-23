@@ -6,7 +6,6 @@ import {
 } from "@/lib/marketplace/data";
 import { hasOffer } from "@/components/marketplace/product-card";
 import { APP_DESCRIPTION, APP_NAME } from "@/lib/app-config";
-import { MarketplaceCatalog } from "./marketplace-catalog";
 import { HeroCarousel } from "./hero-carousel";
 import { RecommendedProducts } from "./recommended-products";
 import { TrendsSection } from "./trends-section";
@@ -52,7 +51,6 @@ export default async function MarketplaceHome() {
 
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <CategoryCircles categories={withCounts(categories, products)} />
-        <MarketplaceCatalog products={products} />
         <TrendsSection />
         {/* Va al final de la portada: justo encima de "Cómo comprar". */}
         <RecommendedProducts collections={collections} />

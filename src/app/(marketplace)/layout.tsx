@@ -36,7 +36,7 @@ export default async function MarketplaceLayout({ children }: { children: React.
 
           <nav className="ml-auto flex shrink-0 items-center gap-2 md:ml-0">
             <Link
-              href="/#catalogo"
+              href="/catalogo"
               className="text-sm text-foreground/80 transition-colors hover:text-foreground"
             >
               Catálogo

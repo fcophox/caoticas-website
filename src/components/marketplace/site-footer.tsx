@@ -78,11 +78,11 @@ export function SiteFooter({ categories }: { categories: MarketplaceCategory[] }
 
           <FooterColumn title="Categorías">
             {categories.map((c) => (
-              <FooterLink key={c.slug} href={`/categoria/${c.slug}`}>
+              <FooterLink key={c.slug} href={`/catalogo?categoria=${c.slug}`}>
                 {c.name}
               </FooterLink>
             ))}
-            <FooterLink href="/#catalogo">Ver todo el catálogo</FooterLink>
+            <FooterLink href="/catalogo">Ver todo el catálogo</FooterLink>
           </FooterColumn>
 
           <FooterColumn title="Ayuda">

@@ -28,7 +28,7 @@ export function CartView() {
           Cuando agregues productos los verás aquí. Tu carro se guarda en este navegador.
         </p>
         <Button asChild className="mt-6 rounded-full">
-          <Link href="/#catalogo">Explorar el catálogo</Link>
+          <Link href="/catalogo">Explorar el catálogo</Link>
         </Button>
       </div>
     );
@@ -47,7 +47,7 @@ export function CartView() {
 
         <div className="flex flex-wrap items-center justify-between gap-3">
           <Link
-            href="/#catalogo"
+            href="/catalogo"
             className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground"
           >
             <ArrowLeft className="size-4" />

@@ -17,22 +17,22 @@ type Trend = {
 const TRENDS: Trend[] = [
   {
     label: "Rutina facial con mascarillas y parches",
-    href: "/categoria/cuidado-facial",
+    href: "/catalogo?categoria=cuidado-facial",
     icon: Smile,
   },
   {
     label: "Cabello protegido del calor",
-    href: "/categoria/cuidado-capilar",
+    href: "/catalogo?categoria=cuidado-capilar",
     icon: Wind,
   },
   {
     label: "Hidratación para el cuerpo",
-    href: "/categoria/cuidado-corporal",
+    href: "/catalogo?categoria=cuidado-corporal",
     icon: Droplets,
   },
   {
     label: "Labios suaves",
-    href: "/categoria/labios",
+    href: "/catalogo?categoria=labios",
     icon: Heart,
   },
   {

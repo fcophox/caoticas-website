@@ -68,7 +68,7 @@ export function CheckoutForm() {
         <h2 className="mt-4 text-lg font-semibold">No hay nada que pagar</h2>
         <p className="mt-1 text-sm text-muted-foreground">Agrega productos a tu carro para finalizar la compra.</p>
         <Button asChild className="mt-6 rounded-full">
-          <Link href="/#catalogo">Ir al catálogo</Link>
+          <Link href="/catalogo">Ir al catálogo</Link>
         </Button>
       </div>
     );

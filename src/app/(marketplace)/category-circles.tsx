@@ -7,7 +7,6 @@ import {
   Wind,
   type LucideIcon,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 import type { MarketplaceCategory } from "@/lib/marketplace/data";
 
 /**
@@ -27,8 +26,6 @@ export type CategoryWithCount = MarketplaceCategory & { count: number };
 
 type Props = {
   categories: CategoryWithCount[];
-  /** Categoría que se está viendo (en su página interna), para marcarla. */
-  activeSlug?: string;
   title?: string;
 };
 
@@ -48,7 +45,6 @@ export function withCounts(
 
 export function CategoryCircles({
   categories,
-  activeSlug,
   title = "Revisa nuestras categorías",
 }: Props) {
   if (categories.length === 0) return null;
@@ -65,21 +61,14 @@ export function CategoryCircles({
       {/* En celular se desliza horizontalmente; en escritorio queda centrado. */}
       <ul className="-mx-4 mt-6 flex snap-x gap-3 overflow-x-auto px-4 pb-2 md:mx-0 md:mt-8 md:flex-wrap md:justify-center md:gap-8 md:overflow-visible md:px-0">
         {categories.map((c) => {
-          const isSelected = activeSlug === c.slug;
           const Icon = FALLBACK_ICON[c.slug] ?? DEFAULT_ICON;
           return (
             <li key={c.slug} className="snap-start">
               <Link
-                href={`/categoria/${c.slug}`}
-                aria-current={isSelected ? "page" : undefined}
+                href={`/catalogo?categoria=${c.slug}`}
                 className="group flex w-18 flex-col items-center gap-2 text-center focus-visible:outline-none md:w-32 md:gap-3"
               >
-                <span
-                  className={cn(
-                    "relative block size-16 overflow-hidden rounded-full ring-offset-2 ring-offset-background md:ring-offset-4 transition-[box-shadow,transform] duration-200 group-hover:-translate-y-0.5 group-focus-visible:ring-2 group-focus-visible:ring-ring md:size-32",
-                    isSelected && "ring-2 ring-primary",
-                  )}
-                >
+                <span className="relative block size-16 overflow-hidden rounded-full ring-offset-2 ring-offset-background md:ring-offset-4 transition-[box-shadow,transform] duration-200 group-hover:-translate-y-0.5 group-focus-visible:ring-2 group-focus-visible:ring-ring md:size-32">
                   {c.imagePath ? (
                     // eslint-disable-next-line @next/next/no-img-element -- ruta pública o URL externa configurable
                     <img

@@ -20,7 +20,7 @@ export default async function MarketplaceLayout({ children }: { children: React.
 
   return (
     <div className="flex min-h-dvh flex-col bg-background text-foreground">
-      <header className="sticky top-0 z-30 border-b bg-background/85 backdrop-blur">
+      <header className="sticky top-0 z-30 border-b bg-brand-gradient">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2.5 md:flex-nowrap md:px-6">
           <Link href="/" aria-label={`${APP_NAME}, ir al inicio`} className="flex shrink-0 items-center">
             <BrandLogo priority className="h-9" />
@@ -37,7 +37,7 @@ export default async function MarketplaceLayout({ children }: { children: React.
           <nav className="ml-auto flex shrink-0 items-center gap-2 md:ml-0">
             <Link
               href="/#catalogo"
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm text-foreground/80 transition-colors hover:text-foreground"
             >
               Catálogo
             </Link>
@@ -61,6 +61,6 @@ export default async function MarketplaceLayout({ children }: { children: React.
 /** Mismo tamaño que el buscador mientras hidrata, para que el encabezado no salte. */
 function SearchPlaceholder() {
   return (
-    <div className="order-last h-10 w-full rounded-full border bg-muted/50 md:order-none md:mx-auto md:max-w-xl md:flex-1" />
+    <div className="order-last h-10 w-full rounded-full border bg-background/80 md:order-none md:mx-auto md:max-w-xl md:flex-1" />
   );
 }

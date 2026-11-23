@@ -41,20 +41,8 @@
   /* Sitio público */
   --color-on-media: var(--on-media);
   --color-overlay: var(--overlay);
-  --color-swatch-1-from: var(--swatch-1-from);
-  --color-swatch-1-to: var(--swatch-1-to);
-  --color-swatch-2-from: var(--swatch-2-from);
-  --color-swatch-2-to: var(--swatch-2-to);
-  --color-swatch-3-from: var(--swatch-3-from);
-  --color-swatch-3-to: var(--swatch-3-to);
-  --color-swatch-4-from: var(--swatch-4-from);
-  --color-swatch-4-to: var(--swatch-4-to);
-  --color-swatch-5-from: var(--swatch-5-from);
-  --color-swatch-5-to: var(--swatch-5-to);
-  --color-swatch-6-from: var(--swatch-6-from);
-  --color-swatch-6-to: var(--swatch-6-to);
-  --color-swatch-7-from: var(--swatch-7-from);
-  --color-swatch-7-to: var(--swatch-7-to);
+  --color-gradient-from: var(--gradient-from);
+  --color-gradient-to: var(--gradient-to);
 
   --font-sans: var(--font-sans-stack);
   --font-mono: var(--font-mono-stack);
@@ -64,6 +52,11 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Degradado de marca (fondo del logotipo). Siempre vertical, como en el logo. */
+@utility bg-brand-gradient {
+  background-image: linear-gradient(to bottom, var(--gradient-from), var(--gradient-to));
 }
 
 @layer base {

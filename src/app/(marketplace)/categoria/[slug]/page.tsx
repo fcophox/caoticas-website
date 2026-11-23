@@ -48,9 +48,9 @@ export default async function CategoryPage({ params }: Props) {
 
   return (
     <>
-      <section className="border-b bg-gradient-to-b from-muted/60 to-background">
+      <section className="border-b bg-brand-gradient">
         <div className="mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-14">
-          <nav aria-label="Ruta" className="flex items-center gap-1 text-sm text-muted-foreground">
+          <nav aria-label="Ruta" className="flex items-center gap-1 text-sm text-foreground/75">
             <Link href="/" className="hover:text-foreground">
               Inicio
             </Link>
@@ -65,7 +65,7 @@ export default async function CategoryPage({ params }: Props) {
           </nav>
 
           <h1 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">{category.name}</h1>
-          <p className="mt-2 text-muted-foreground">
+          <p className="mt-2 text-foreground/75">
             {items.length} {items.length === 1 ? "producto" : "productos"}
             {offers > 0 && ` · ${offers} ${offers === 1 ? "oferta" : "ofertas"}`}
           </p>

@@ -92,23 +92,11 @@ base:
   colors.on-media: "#ffffff"
   colors.overlay: "#1c1323"
 
-  # Paleta de degradados (círculos de categorías, tendencias), tomada del
-  # logo: lavanda, rosa orquídea, durazno, morado y el negro de las letras.
-  # Cada tono tiene un inicio (-from) y un final (-to).
-  colors.swatch-1-from: "#b48ae6"
-  colors.swatch-1-to: "#d96ec4"
-  colors.swatch-2-from: "#f0a46e"
-  colors.swatch-2-to: "#d9609f"
-  colors.swatch-3-from: "#a77be0"
-  colors.swatch-3-to: "#6a35a8"
-  colors.swatch-4-from: "#e07cbf"
-  colors.swatch-4-to: "#f0a07a"
-  colors.swatch-5-from: "#1c1323"
-  colors.swatch-5-to: "#8a3d93"
-  colors.swatch-6-from: "#c58fe8"
-  colors.swatch-6-to: "#8f5fd6"
-  colors.swatch-7-from: "#c45bb8"
-  colors.swatch-7-to: "#9b6fe0"
+  # Degradado de marca: el fondo del logotipo, de durazno (arriba) a lila
+  # (abajo). Navbar, círculos de categorías, tendencias y encabezados.
+  # Se usa con la utilidad `bg-brand-gradient` (globals.css).
+  colors.gradient-from: "#ffe4cf"
+  colors.gradient-to: "#e1affd"
 
   # Tipografía — `--font-arimo` lo inyecta next/font en el layout raíz
   fonts.sans: "var(--font-arimo), system-ui, sans-serif"

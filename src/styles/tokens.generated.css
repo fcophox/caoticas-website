@@ -13,20 +13,8 @@
 :root {
   --on-media: #ffffff;
   --overlay: #1c1323;
-  --swatch-1-from: #b48ae6;
-  --swatch-1-to: #d96ec4;
-  --swatch-2-from: #f0a46e;
-  --swatch-2-to: #d9609f;
-  --swatch-3-from: #a77be0;
-  --swatch-3-to: #6a35a8;
-  --swatch-4-from: #e07cbf;
-  --swatch-4-to: #f0a07a;
-  --swatch-5-from: #1c1323;
-  --swatch-5-to: #8a3d93;
-  --swatch-6-from: #c58fe8;
-  --swatch-6-to: #8f5fd6;
-  --swatch-7-from: #c45bb8;
-  --swatch-7-to: #9b6fe0;
+  --gradient-from: #ffe4cf;
+  --gradient-to: #e1affd;
   --font-sans-stack: var(--font-arimo), system-ui, sans-serif;
   --font-mono-stack: ui-monospace, SFMono-Regular, Menlo, monospace;
   --radius: 0.625rem;

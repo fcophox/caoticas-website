@@ -1,19 +1,16 @@
 import Link from "next/link";
 import { Droplets, Heart, Smile, Sparkles, Wind, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { SWATCH, type SwatchTone } from "@/components/marketplace/swatches";
 
 /**
  * Mosaico de tendencias: una tarjeta grande a la izquierda y cuatro chicas a
- * la derecha. Las "imágenes" se emulan con degradados y formas; para usar
+ * la derecha. Las "imágenes" se emulan con el degradado de marca y formas; para usar
  * fotos reales, agrega `image` (ruta en /public o URL) a la tarjeta.
  */
 type Trend = {
   label: string;
   href: string;
   icon: LucideIcon;
-  /** Tono de la paleta `swatch-*` de tokens.yml. */
-  tone: SwatchTone;
   image?: string;
 };
 
@@ -22,31 +19,26 @@ const TRENDS: Trend[] = [
     label: "Rutina facial con mascarillas y parches",
     href: "/categoria/cuidado-facial",
     icon: Smile,
-    tone: 4,
   },
   {
     label: "Cabello protegido del calor",
     href: "/categoria/cuidado-capilar",
     icon: Wind,
-    tone: 1,
   },
   {
     label: "Hidratación para el cuerpo",
     href: "/categoria/cuidado-corporal",
     icon: Droplets,
-    tone: 3,
   },
   {
     label: "Labios suaves",
     href: "/categoria/labios",
     icon: Heart,
-    tone: 5,
   },
   {
     label: "Nuevos lanzamientos",
     href: "/#recomendados",
     icon: Sparkles,
-    tone: 2,
   },
 ];
 
@@ -100,16 +92,16 @@ function TrendCard({
           // eslint-disable-next-line @next/next/no-img-element -- imagen decorativa configurable
           <img src={trend.image} alt="" className="size-full object-cover" />
         ) : (
-          <div className={cn("relative size-full bg-gradient-to-br", SWATCH[trend.tone])}>
-            <span className="absolute -right-10 -top-10 size-48 rounded-full bg-on-media/15" />
-            <span className="absolute -bottom-16 left-1/4 size-56 rounded-full bg-overlay/10" />
+          <div className="relative size-full bg-brand-gradient">
+            <span className="absolute -right-10 -top-10 size-48 rounded-full bg-on-media/40" />
+            <span className="absolute -bottom-16 left-1/4 size-56 rounded-full bg-overlay/5" />
             {/* Anillo punteado, como el adorno de la referencia. */}
-            <span className="absolute right-8 top-6 size-20 rounded-full border-4 border-dotted border-on-media/50" />
+            <span className="absolute right-8 top-6 size-20 rounded-full border-4 border-dotted border-overlay/25" />
             <Icon
               aria-hidden
               strokeWidth={1.25}
               className={cn(
-                "absolute bottom-0 right-0 translate-x-[10%] translate-y-[10%] text-on-media/85 drop-shadow-xl",
+                "absolute bottom-0 right-0 translate-x-[10%] translate-y-[10%] text-overlay/80",
                 isFeatured ? "size-64 md:size-80" : "size-32",
               )}
             />

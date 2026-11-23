@@ -5,8 +5,10 @@ import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /**
- * Diapositivas del hero. Para usar fotos reales, deja los archivos en
- * `public/hero/` y cambia `image` (jpg/webp de ~1600×800 funcionan bien).
+ * Diapositivas del hero. Los fondos son el degradado de marca con formas
+ * suaves; el texto va oscuro encima. Para usar fotos reales, deja los
+ * archivos en `public/hero/` y cambia `image` (jpg/webp de ~1600×800): si la
+ * foto es oscura, el texto necesita volver a blanco con un velo detrás.
  */
 const SLIDES = [
   {
@@ -58,7 +60,7 @@ export function HeroCarousel({ highlights }: Props) {
     <section
       aria-roledescription="carrusel"
       aria-label="Destacados"
-      className="relative isolate overflow-hidden border-b text-on-media"
+      className="relative isolate overflow-hidden border-b text-foreground"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onFocus={() => setIsHovered(true)}
@@ -73,13 +75,11 @@ export function HeroCarousel({ highlights }: Props) {
           alt=""
           aria-hidden
           className={cn(
-            "absolute inset-0 -z-20 size-full object-cover transition-[opacity,transform] duration-[1200ms] ease-out motion-reduce:transition-none",
+            "absolute inset-0 -z-10 size-full object-cover transition-[opacity,transform] duration-[1200ms] ease-out motion-reduce:transition-none",
             i === index ? "scale-100 opacity-100" : "scale-105 opacity-0",
           )}
         />
       ))}
-      {/* Velo para que el texto blanco siempre tenga contraste. */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-overlay/70 via-overlay/40 to-overlay/10" />
 
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         {/* Los textos comparten celda de grilla: la altura la fija el más largo y nada salta. */}
@@ -101,16 +101,16 @@ export function HeroCarousel({ highlights }: Props) {
                   isActive ? "translate-y-0 opacity-100 delay-200" : "translate-y-4 opacity-0",
                 )}
               >
-                <p className="text-sm font-medium uppercase tracking-widest text-on-media/75">
+                <p className="text-sm font-medium uppercase tracking-widest text-foreground/70">
                   {slide.eyebrow}
                 </p>
                 <Heading className="mt-3 max-w-2xl text-balance text-4xl font-bold tracking-tight md:text-5xl">
                   {slide.title}
                 </Heading>
-                <p className="mt-4 max-w-xl text-pretty text-on-media/85 md:text-lg">{slide.text}</p>
+                <p className="mt-4 max-w-xl text-pretty text-foreground/80 md:text-lg">{slide.text}</p>
                 <a
                   href="#catalogo"
-                  className="mt-7 inline-flex h-10 items-center rounded-[var(--radius)] bg-on-media px-5 text-sm font-semibold text-overlay transition-colors hover:bg-on-media/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-media focus-visible:ring-offset-2 focus-visible:ring-offset-overlay"
+                  className="mt-7 inline-flex h-10 items-center rounded-[var(--radius)] bg-overlay px-5 text-sm font-semibold text-on-media transition-colors hover:bg-overlay/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
                   {slide.cta}
                 </a>
@@ -120,7 +120,7 @@ export function HeroCarousel({ highlights }: Props) {
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-4 pb-8">
-          <div className="text-on-media/85">{highlights}</div>
+          <div className="text-foreground/80">{highlights}</div>
 
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1.5" role="tablist" aria-label="Elegir diapositiva">
@@ -134,7 +134,7 @@ export function HeroCarousel({ highlights }: Props) {
                   onClick={() => go(i)}
                   className={cn(
                     "h-2 rounded-full transition-all",
-                    i === index ? "w-6 bg-on-media" : "w-2 bg-on-media/45 hover:bg-on-media/70",
+                    i === index ? "w-6 bg-overlay" : "w-2 bg-overlay/30 hover:bg-overlay/55",
                   )}
                 />
               ))}
@@ -173,7 +173,7 @@ function CarouselButton({
       aria-label={label}
       title={label}
       onClick={onClick}
-      className="grid size-8 place-items-center rounded-full border border-on-media/30 bg-overlay/20 backdrop-blur transition-colors hover:bg-overlay/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-on-media"
+      className="grid size-8 place-items-center rounded-full border border-overlay/15 bg-on-media/50 transition-colors hover:bg-on-media/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
     >
       {children}
     </button>

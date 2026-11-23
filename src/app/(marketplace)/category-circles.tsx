@@ -8,20 +8,20 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { SWATCH } from "@/components/marketplace/swatches";
 import type { MarketplaceCategory } from "@/lib/marketplace/data";
 
 /**
- * Aspecto de cada categoría cuando no tiene imagen propia (`image_path`).
- * Una categoría nueva sin entrada aquí usa el ícono y degradado por defecto.
+ * Ícono de cada categoría cuando no tiene imagen propia (`image_path`); va
+ * sobre el degradado de marca. Una categoría nueva sin entrada aquí usa el
+ * ícono por defecto.
  */
-const FALLBACK: Record<string, { icon: LucideIcon; gradient: string }> = {
-  "cuidado-capilar": { icon: Wind, gradient: SWATCH[1] },
-  "cuidado-facial": { icon: Smile, gradient: SWATCH[4] },
-  "cuidado-corporal": { icon: Droplets, gradient: SWATCH[3] },
-  labios: { icon: Heart, gradient: SWATCH[5] },
+const FALLBACK_ICON: Record<string, LucideIcon> = {
+  "cuidado-capilar": Wind,
+  "cuidado-facial": Smile,
+  "cuidado-corporal": Droplets,
+  labios: Heart,
 };
-const DEFAULT_LOOK = { icon: Tag, gradient: SWATCH[6] };
+const DEFAULT_ICON = Tag;
 
 export type CategoryWithCount = MarketplaceCategory & { count: number };
 
@@ -66,8 +66,7 @@ export function CategoryCircles({
       <ul className="-mx-4 mt-6 flex snap-x gap-3 overflow-x-auto px-4 pb-2 md:mx-0 md:mt-8 md:flex-wrap md:justify-center md:gap-8 md:overflow-visible md:px-0">
         {categories.map((c) => {
           const isSelected = activeSlug === c.slug;
-          const look = FALLBACK[c.slug] ?? DEFAULT_LOOK;
-          const Icon = look.icon;
+          const Icon = FALLBACK_ICON[c.slug] ?? DEFAULT_ICON;
           return (
             <li key={c.slug} className="snap-start">
               <Link
@@ -90,10 +89,7 @@ export function CategoryCircles({
                     />
                   ) : (
                     <span
-                      className={cn(
-                        "grid size-full place-items-center bg-gradient-to-br text-on-media transition-transform duration-300 group-hover:scale-105",
-                        look.gradient,
-                      )}
+                      className="grid size-full place-items-center bg-brand-gradient text-foreground transition-transform duration-300 group-hover:scale-105"
                     >
                       <Icon className="size-7 md:size-12" strokeWidth={1.5} />
                     </span>

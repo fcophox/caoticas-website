@@ -122,7 +122,7 @@ export function HeaderSearch({ products, className }: Props) {
         }}
         onFocus={() => setIsOpen(true)}
         onKeyDown={handleKeyDown}
-        className="h-10 w-full rounded-full border bg-muted/50 pl-9 pr-9 text-sm outline-none transition-[color,box-shadow,background-color] placeholder:text-muted-foreground focus-visible:border-ring focus-visible:bg-background focus-visible:ring-[3px] focus-visible:ring-ring/50 [&::-webkit-search-cancel-button]:hidden"
+        className="h-10 w-full rounded-full border bg-background/80 pl-9 pr-9 text-sm outline-none transition-[color,box-shadow,background-color] placeholder:text-muted-foreground focus-visible:border-ring focus-visible:bg-background focus-visible:ring-[3px] focus-visible:ring-ring/50 [&::-webkit-search-cancel-button]:hidden"
       />
       {query && (
         <button

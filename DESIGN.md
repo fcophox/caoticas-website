@@ -105,19 +105,45 @@ del design system de Shadcn y es distinto de `danger`, que es contenido.
 
 ### Tokens para contenido sobre imágenes
 
-El marketplace pone texto y botones **sobre imágenes y degradados**, donde
+El marketplace pone texto y botones **sobre imágenes**, donde
 `foreground`/`background` no sirven (cambian con el tema y la foto no). Para eso
 existen tokens que valen igual en ambos temas:
 
 | Token | Utilidad | Uso |
 |---|---|---|
-| `on-media` | `text-on-media`, `bg-on-media` | Texto, íconos y botón claro sobre imágenes (hero, tendencias) |
-| `overlay` | `bg-overlay/60`, `from-overlay/70` | Velo del hero y pestaña negra de las tendencias |
-| `swatch-1…7-from` / `-to` | `from-swatch-N-from to-swatch-N-to` | Paleta de degradados: círculos de categorías y tarjetas de tendencias |
+| `on-media` | `text-on-media`, `bg-on-media` | Texto e íconos claros sobre fondos oscuros: botón del hero, pestaña de las tendencias |
+| `overlay` | `bg-overlay`, `bg-overlay/60` | Botón y puntos del hero, pestaña negra de las tendencias, fondo del carrito abierto |
 
-Los degradados se usan siempre a través de `SWATCH[n]` en
-[`src/components/marketplace/swatches.ts`](src/components/marketplace/swatches.ts):
-Tailwind sólo genera las clases que encuentra escritas enteras en el código.
+### Degradado de marca
+
+Es el fondo del logotipo y el **único degradado decorativo del sitio**. Va de
+arriba hacia abajo, igual que en el logo:
+
+| Parada | Token | Valor |
+|---|---|---|
+| 0 % (arriba) | `gradient-from` | `#ffe4cf` durazno |
+| 100 % (abajo) | `gradient-to` | `#e1affd` lila |
+
+Se aplica con la utilidad `bg-brand-gradient`, definida en
+[`globals.css`](src/styles/globals.css) a partir de esos dos tokens. Para
+otra dirección, usa los colores sueltos: `bg-linear-to-r from-gradient-from to-gradient-to`.
+
+| Dónde | Archivo |
+|---|---|
+| Navbar | [`(marketplace)/layout.tsx`](src/app/(marketplace)/layout.tsx) |
+| Fondos del hero | [`public/hero/slide-*.svg`](public/hero) (escrito a mano en el SVG) |
+| Círculos de categorías | [`category-circles.tsx`](src/app/(marketplace)/category-circles.tsx) |
+| Tarjetas de tendencias sin foto | [`trends-section.tsx`](src/app/(marketplace)/trends-section.tsx) |
+| Encabezado de cada categoría | [`categoria/[slug]/page.tsx`](src/app/(marketplace)/categoria/[slug]/page.tsx) |
+
+**Contraste.** Es un fondo claro en ambos temas: encima va texto e íconos
+`foreground` (o `overlay`), nunca `on-media` (blanco). `muted-foreground`
+tampoco alcanza 4,5:1 sobre el lila: para texto secundario usa
+`text-foreground/75`.
+
+El hero ya no lleva velo oscuro: su texto es `foreground` sobre el degradado.
+Si se cambian los fondos por fotos oscuras, hay que volver a texto `on-media`
+con un velo `overlay` detrás.
 
 ---
 
@@ -131,12 +157,12 @@ los reflejos, el magenta del contorno y el negro violáceo de las letras.
 | Acción: botones, foco, etiqueta de descuento | `primary`, `ring` | `#8a3d93` (magenta oscurecido: 6,6:1 con blanco) |
 | Texto y "negro" de marca | `foreground`, `overlay` | `#1c1323` |
 | Superficies suaves | `secondary`, `accent`, `muted` | `#f2e6fb`, `#f7f0fb` |
-| Degradados | `swatch-1…7` | lavanda→rosa, durazno→rosa, lila→morado, rosa→durazno, negro→orquídea… |
+| Degradado de marca | `gradient-from`, `gradient-to` | `#ffe4cf` → `#e1affd`, el fondo del logotipo (`bg-brand-gradient`) |
 | Exactos del logo | `brand-primary`, `brand-secondary` | `#c45bb8`, `#c9a2f2` |
 
-Los SVG del hero (`public/hero/`) y los marcadores de producto
-(`scripts/generate-product-images.mjs`) usan la misma paleta escrita a mano:
-si cambias los tokens, actualízalos también.
+Los SVG del hero (`public/hero/`, con el degradado de marca) y los marcadores
+de producto (`scripts/generate-product-images.mjs`) llevan los colores
+escritos a mano: si cambias los tokens, actualízalos también.
 
 ## Ver y cambiar los tokens
 
@@ -207,5 +233,6 @@ tema solo.
 | **Acentos** | `primary`, `secondary`, `accent`, `ring`, `radius` | Botones, etiquetas de descuento, foco |
 | **Estados** | `destructive`, `warn`, `success`, `danger` (+ `-surface`) | Badges y callouts |
 | **Identidad exacta** | `brand-primary`, `brand-secondary` | El hex de la marca sin ajuste de contraste |
-| **Sobre imágenes** | `on-media`, `overlay`, `swatch-*` | Iguales en ambos temas |
+| **Sobre imágenes** | `on-media`, `overlay` | Iguales en ambos temas |
+| **Degradado de marca** | `gradient-from`, `gradient-to` | `bg-brand-gradient`; igual en ambos temas |
 | **Escalas** | `spacing-*`, `radius-*`, `shadow-*`, `anim-*`, `breakpoint-*` | Compartidas salvo las sombras, que sí varían por tema |

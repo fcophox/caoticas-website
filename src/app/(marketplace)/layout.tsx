@@ -38,11 +38,13 @@ export default async function MarketplaceLayout({ children }: { children: React.
           <nav className="ml-auto flex shrink-0 items-center gap-3 md:ml-0 md:gap-6">
             <Link
               href="/catalogo"
-              className="text-sm text-foreground/80 transition-colors hover:text-foreground"
+              className="text-base text-foreground/80 transition-colors hover:text-foreground"
             >
               Catálogo
             </Link>
             <AccountLinks />
+            {/* Separa el saludo de la cesta; en celular no hay saludo, sólo íconos. */}
+            <span aria-hidden className="hidden h-6 w-px bg-foreground/20 md:block" />
             <div className="flex items-center gap-1">
               {THEME_TOGGLE_ENABLED && <ThemeToggle />}
               <CartButton />
@@ -83,8 +85,8 @@ function AccountLinks() {
       >
         <UserRound className="size-5" aria-hidden />
       </Link>
-      <p className="hidden text-sm leading-tight text-foreground/80 md:block">
-        <span className="block text-xs text-foreground/70">¡Hola!</span>
+      <p className="hidden whitespace-nowrap text-base text-foreground/80 md:block">
+        ¡Hola!{" "}
         <Link href={ACCOUNT_LINKS.login} className="font-semibold text-foreground hover:underline">
           Ingresa
         </Link>{" "}

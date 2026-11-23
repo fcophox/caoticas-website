@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import { UserRound } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CartButton } from "@/components/cart/cart-button";
 import { CartDrawer } from "@/components/cart/cart-drawer";
@@ -8,7 +9,7 @@ import { listPublicCategories, listPublicProducts } from "@/lib/marketplace/data
 import { SiteFooter } from "@/components/marketplace/site-footer";
 import { HowItWorks } from "@/components/marketplace/how-it-works";
 import { BrandLogo } from "@/components/marketplace/brand-logo";
-import { APP_NAME, THEME_TOGGLE_ENABLED } from "@/lib/app-config";
+import { ACCOUNT_LINKS, APP_NAME, THEME_TOGGLE_ENABLED } from "@/lib/app-config";
 
 /** Marco del sitio: encabezado, contenido, "Cómo comprar" y pie. */
 export default async function MarketplaceLayout({ children }: { children: React.ReactNode }) {
@@ -34,15 +35,18 @@ export default async function MarketplaceLayout({ children }: { children: React.
             />
           </Suspense>
 
-          <nav className="ml-auto flex shrink-0 items-center gap-2 md:ml-0">
+          <nav className="ml-auto flex shrink-0 items-center gap-3 md:ml-0 md:gap-6">
             <Link
               href="/catalogo"
               className="text-sm text-foreground/80 transition-colors hover:text-foreground"
             >
               Catálogo
             </Link>
-            {THEME_TOGGLE_ENABLED && <ThemeToggle />}
-            <CartButton />
+            <AccountLinks />
+            <div className="flex items-center gap-1">
+              {THEME_TOGGLE_ENABLED && <ThemeToggle />}
+              <CartButton />
+            </div>
           </nav>
         </div>
       </header>
@@ -62,5 +66,33 @@ export default async function MarketplaceLayout({ children }: { children: React.
 function SearchPlaceholder() {
   return (
     <div className="order-last h-10 w-full rounded-full border bg-background/80 md:order-none md:mx-auto md:max-w-xl md:flex-1" />
+  );
+}
+
+/**
+ * "¡Hola! Ingresa o regístrate". En celular, donde no cabe el texto, queda un
+ * ícono que lleva a ingresar.
+ */
+function AccountLinks() {
+  return (
+    <>
+      <Link
+        href={ACCOUNT_LINKS.login}
+        aria-label="Ingresar a tu cuenta"
+        className="grid size-9 place-items-center rounded-full text-foreground/80 transition-colors hover:text-foreground md:hidden"
+      >
+        <UserRound className="size-5" aria-hidden />
+      </Link>
+      <p className="hidden text-sm leading-tight text-foreground/80 md:block">
+        <span className="block text-xs text-foreground/70">¡Hola!</span>
+        <Link href={ACCOUNT_LINKS.login} className="font-semibold text-foreground hover:underline">
+          Ingresa
+        </Link>{" "}
+        o{" "}
+        <Link href={ACCOUNT_LINKS.signup} className="font-semibold text-foreground hover:underline">
+          regístrate
+        </Link>
+      </p>
+    </>
   );
 }

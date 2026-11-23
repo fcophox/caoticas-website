@@ -46,3 +46,14 @@ export const POLICIES = {
  * cualquier elección guardada antes.
  */
 export const THEME_TOGGLE_ENABLED = false;
+
+/**
+ * Enlaces de cuenta del encabezado ("¡Hola! Ingresa o regístrate").
+ *
+ * Hoy llevan a páginas provisorias ("muy pronto"); cuando existan las cuentas,
+ * reemplaza esas páginas o apunta aquí a las reales.
+ */
+export const ACCOUNT_LINKS = {
+  login: "/ingresar",
+  signup: "/registro",
+} as const;
